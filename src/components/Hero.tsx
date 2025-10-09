@@ -56,7 +56,7 @@ const Hero = ({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-gold-400 text-lg font-medium tracking-wide uppercase"
+            className="text-white text-lg font-medium tracking-wide uppercase"
           >
             {subtitle}
           </motion.p>
@@ -76,7 +76,7 @@ const Hero = ({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-xl md:text-2xl text-beige-100 max-w-3xl mx-auto leading-relaxed"
+            className="text-xl md:text-2xl text-white max-w-3xl mx-auto leading-relaxed"
           >
             {description}
           </motion.p>
@@ -87,7 +87,7 @@ const Hero = ({
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="flex items-center justify-center space-x-2 text-gold-400"
+              className="flex items-center justify-center space-x-2 text-white"
             >
               <div className="flex space-x-1">
                 {[...Array(5)].map((_, i) => (
@@ -109,7 +109,7 @@ const Hero = ({
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-gold-500 hover:bg-gold-400 text-sage-900 px-8 py-4 rounded-full font-semibold text-lg transition-colors duration-200 flex items-center space-x-2 shadow-lg"
+                className="bg-gold-500 hover:bg-gold-400 text-white px-8 py-4 rounded-full font-semibold text-lg transition-colors duration-200 flex items-center space-x-2 shadow-lg"
               >
                 <span>{primaryButtonText}</span>
                 <ArrowRight size={20} />
@@ -121,7 +121,7 @@ const Hero = ({
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="border-2 border-white text-white hover:bg-white hover:text-sage-900 px-8 py-4 rounded-full font-semibold text-lg transition-colors duration-200"
+                  className="border-2 border-white text-white hover:bg-white hover:text-white px-8 py-4 rounded-full font-semibold text-lg transition-colors duration-200"
                 >
                   {secondaryButtonText}
                 </motion.button>

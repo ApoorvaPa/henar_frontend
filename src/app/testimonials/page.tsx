@@ -140,7 +140,7 @@ export default function Testimonials() {
                   <Quote />
                 </div>
                 <p className="text-beige-200 mb-6 leading-relaxed italic">
-                  "{testimonial.text}"
+                  &ldquo;{testimonial.text}&rdquo;
                 </p>
                 <div className="flex items-center justify-between">
                   <div>

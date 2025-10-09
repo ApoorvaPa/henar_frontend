@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { Star, Quote } from 'lucide-react';
 
 interface TestimonialCardProps {
@@ -39,7 +40,7 @@ const TestimonialCard = ({ testimonial, index }: TestimonialCardProps) => {
 
       {/* Testimonial Text */}
       <p className="text-sage-600 mb-6 leading-relaxed italic">
-        "{testimonial.text}"
+        &ldquo;{testimonial.text}&rdquo;
       </p>
 
       {/* Service Badge */}
@@ -52,9 +53,11 @@ const TestimonialCard = ({ testimonial, index }: TestimonialCardProps) => {
       {/* Client Info */}
       <div className="flex items-center space-x-4">
         <div className="w-12 h-12 rounded-full overflow-hidden bg-gradient-to-br from-gold-400 to-maroon-500 flex items-center justify-center">
-          <img
+          <Image
             src={testimonial.image}
             alt={testimonial.name}
+            width={48}
+            height={48}
             className="w-full h-full object-cover"
             onError={(e) => {
               const target = e.target as HTMLImageElement;

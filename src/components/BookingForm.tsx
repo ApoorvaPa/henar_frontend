@@ -71,7 +71,7 @@ const BookingForm = ({ preselectedService }: BookingFormProps) => {
           Booking Request Sent!
         </h3>
         <p className="text-sage-600 mb-4">
-          Thank you for your booking request. We'll contact you within 24 hours to confirm your appointment.
+          Thank you for your booking request. We&apos;ll contact you within 24 hours to confirm your appointment.
         </p>
         <p className="text-sm text-sage-500">
           You can also reach us directly at +1 (234) 567-890
@@ -92,7 +92,7 @@ const BookingForm = ({ preselectedService }: BookingFormProps) => {
           Book Your Appointment
         </h2>
         <p className="text-sage-600">
-          Fill out the form below and we'll get back to you within 24 hours
+          Fill out the form below and we&apos;ll get back to you within 24 hours
         </p>
       </div>
 

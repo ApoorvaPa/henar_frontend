@@ -2,6 +2,7 @@
 
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
+import Image from 'next/image';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface GalleryProps {
@@ -80,9 +81,11 @@ const Gallery = ({ items, categories = ['all', 'bridal', 'party', 'arabic', 'min
               onClick={() => openLightbox(index)}
             >
               <div className="relative h-64 overflow-hidden">
-                <img
+                <Image
                   src={item.image}
                   alt={item.title}
+                  width={400}
+                  height={300}
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
@@ -120,9 +123,11 @@ const Gallery = ({ items, categories = ['all', 'bridal', 'party', 'arabic', 'min
               className="relative max-w-4xl max-h-full"
               onClick={(e) => e.stopPropagation()}
             >
-              <img
+              <Image
                 src={filteredItems[selectedImage].image}
                 alt={filteredItems[selectedImage].title}
+                width={800}
+                height={600}
                 className="max-w-full max-h-full object-contain rounded-lg"
               />
               

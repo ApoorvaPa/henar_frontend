@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { Check, Clock, DollarSign } from 'lucide-react';
 import Link from 'next/link';
 
@@ -29,9 +30,11 @@ const ServiceCard = ({ service, index }: ServiceCardProps) => {
     >
       {/* Image */}
       <div className="relative h-48 overflow-hidden">
-        <img
+        <Image
           src={service.image}
           alt={service.title}
+          width={400}
+          height={200}
           className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />

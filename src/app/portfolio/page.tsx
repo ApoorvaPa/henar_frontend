@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import SectionTitle from '@/components/SectionTitle';
 import Gallery from '@/components/Gallery';
 import { portfolioItems } from '@/data/sampleData';
@@ -89,9 +90,11 @@ export default function Portfolio() {
                 className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
               >
                 <div className="relative h-48 overflow-hidden">
-                  <img
+                  <Image
                     src={category.image}
                     alt={category.title}
+                    width={400}
+                    height={200}
                     className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
@@ -210,7 +213,7 @@ export default function Portfolio() {
                   ))}
                 </div>
                 <p className="text-beige-200 mb-4 italic">
-                  "{testimonial.text}"
+                  &ldquo;{testimonial.text}&rdquo;
                 </p>
                 <h4 className="font-semibold text-gold-400">
                   {testimonial.name}

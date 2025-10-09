@@ -163,7 +163,7 @@ export default function Contact() {
                 Message Sent Successfully!
               </h3>
               <p className="text-sage-600 mb-4">
-                Thank you for your message. We'll get back to you within 24 hours.
+                Thank you for your message. We&apos;ll get back to you within 24 hours.
               </p>
               <p className="text-sm text-sage-500">
                 You can also reach us directly at +1 (234) 567-890
@@ -402,7 +402,7 @@ export default function Contact() {
               Ready to Get Started?
             </h2>
             <p className="text-xl text-sage-800 max-w-2xl mx-auto">
-              Don't wait! Book your consultation today and let us create beautiful memories for your special occasion.
+              Don&apos;t wait! Book your consultation today and let us create beautiful memories for your special occasion.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
               <a

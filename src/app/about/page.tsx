@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import SectionTitle from '@/components/SectionTitle';
 import { Heart, Award, Users, Star } from 'lucide-react';
 
@@ -68,9 +69,11 @@ export default function About() {
               className="relative"
             >
               <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
-                <img
+                <Image
                   src="/images/about-story.jpg"
                   alt="Mehndi artist at work"
+                  width={500}
+                  height={500}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -142,9 +145,11 @@ export default function About() {
               className="relative"
             >
               <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
-                <img
+                <Image
                   src="/images/about-experience.jpg"
                   alt="Professional mehndi application"
+                  width={500}
+                  height={500}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -183,7 +188,7 @@ export default function About() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-sage-900 mb-2">Happy Clients</h4>
-                    <p className="text-sage-600">From brides to party-goers, we've made countless special moments beautiful</p>
+                    <p className="text-sage-600">From brides to party-goers, we&apos;ve made countless special moments beautiful</p>
                   </div>
                 </div>
 
