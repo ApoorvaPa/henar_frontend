@@ -74,7 +74,7 @@ const BookingForm = ({ preselectedService }: BookingFormProps) => {
           Thank you for your booking request. We&apos;ll contact you within 24 hours to confirm your appointment.
         </p>
         <p className="text-sm text-sage-500">
-          You can also reach us directly at +1 (234) 567-890
+          You can also reach us directly at +91 9318435436
         </p>
       </motion.div>
     );
@@ -145,7 +145,7 @@ const BookingForm = ({ preselectedService }: BookingFormProps) => {
               onChange={handleChange}
               required
               className="w-full px-4 py-3 border border-beige-300 rounded-lg focus:outline-none focus:border-maroon-500 transition-colors"
-              placeholder="+1 (234) 567-890"
+              placeholder="+91 9318435436"
             />
           </div>
 

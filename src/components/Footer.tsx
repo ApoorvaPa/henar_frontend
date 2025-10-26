@@ -11,8 +11,8 @@ const Footer = () => {
     services: [
       { name: 'Bridal Mehndi', href: '/services#bridal' },
       { name: 'Party Mehndi', href: '/services#party' },
-      { name: 'Arabic Mehndi', href: '/services#arabic' },
-      { name: 'Minimal Mehndi', href: '/services#minimal' },
+      { name: 'Festival Mehndi', href: '/services#Festival' },
+      { name: 'Hobby Mehndi', href: '/services#Hobby' },
     ],
     pages: [
       { name: 'About Us', href: '/about' },
@@ -49,11 +49,11 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Phone size={16} className="text-gold-400" />
-                <span className="text-beige-200">+1 (234) 567-890</span>
+                <span className="text-beige-200">+91 9318435436</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail size={16} className="text-gold-400" />
-                <span className="text-beige-200">henarmehndi@gmail.com</span>
+                <span className="text-beige-200">henar9813@gmail.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin size={16} className="text-gold-400" />

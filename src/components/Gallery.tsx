@@ -17,7 +17,7 @@ interface GalleryProps {
   categories?: string[];
 }
 
-const Gallery = ({ items, categories = ['all', 'bridal', 'party', 'arabic', 'minimal'] }: GalleryProps) => {
+const Gallery = ({ items, categories = ['all', 'bridal', 'party', 'Festival', 'Hobby'] }: GalleryProps) => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 

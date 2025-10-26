@@ -14,7 +14,7 @@ A beautiful, responsive Next.js 14 website for a professional mehndi artist, bui
 
 1. **Home** - Hero banner, services preview, featured designs, testimonials
 2. **About** - Artist story and vision
-3. **Services** - Grid of service cards (Bridal, Party, Arabic, Minimal)
+3. **Services** - Grid of service cards (Bridal, Party, Festival, Hobby)
 4. **Portfolio** - Filterable gallery with lightbox
 5. **Booking** - Simple form for appointments
 6. **Testimonials** - Client feedback cards

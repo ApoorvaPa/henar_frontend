@@ -87,16 +87,16 @@ export default function Contact() {
               {
                 icon: Phone,
                 title: "Phone",
-                description: "+1 (234) 567-890",
+                description: "+91 9318435436",
                 action: "Call Now",
                 href: "tel:+1234567890"
               },
               {
                 icon: Mail,
                 title: "Email",
-                description: "henarmehndi@gmail.com",
+                description: "henar9813@gmail.com",
                 action: "Send Email",
-                href: "mailto:henarmehndi@gmail.com"
+                href: "mailto:henar9813@gmail.com"
               },
               {
                 icon: MapPin,
@@ -166,7 +166,7 @@ export default function Contact() {
                 Thank you for your message. We&apos;ll get back to you within 24 hours.
               </p>
               <p className="text-sm text-sage-500">
-                You can also reach us directly at +1 (234) 567-890
+                You can also reach us directly at +91 9318435436
               </p>
             </motion.div>
           ) : (
@@ -220,7 +220,7 @@ export default function Contact() {
                       value={formData.phone}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-beige-300 rounded-lg focus:outline-none focus:border-maroon-500 transition-colors"
-                      placeholder="+1 (234) 567-890"
+                      placeholder="+91 9318435436"
                     />
                   </div>
 
@@ -311,7 +311,7 @@ export default function Contact() {
               },
               {
                 platform: "WhatsApp",
-                handle: "+1 (234) 567-890",
+                handle: "+91 9318435436",
                 description: "Quick booking and instant responses to your queries.",
                 color: "from-green-500 to-green-700"
               }
@@ -351,7 +351,7 @@ export default function Contact() {
             {[
               {
                 question: "How quickly do you respond to inquiries?",
-                answer: "We typically respond to all inquiries within 24 hours. For urgent booking requests, you can call us directly at +1 (234) 567-890."
+                answer: "We typically respond to all inquiries within 24 hours. For urgent booking requests, you can call us directly at +91 9318435436."
               },
               {
                 question: "Do you offer consultations?",

@@ -58,7 +58,7 @@ const ServiceCard = ({ service, index }: ServiceCardProps) => {
         {/* Price and Duration */}
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center space-x-2 text-gold-600">
-            <DollarSign size={20} />
+        
             <span className="font-semibold text-lg">{service.price}</span>
           </div>
           <div className="flex items-center space-x-2 text-sage-600">

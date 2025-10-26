@@ -67,16 +67,28 @@ export default function Home() {
           <Gallery items={portfolioItems.slice(0, 6)} />
           
           <div className="text-center mt-12">
-            <Link href="/portfolio">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gold-500 hover:bg-gold-400 text-sage-900 px-8 py-4 rounded-full font-semibold text-lg transition-colors duration-200 flex items-center space-x-2 mx-auto"
-              >
-                <span>View Full Portfolio</span>
-                <ArrowRight size={20} />
-              </motion.button>
-            </Link>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Link href="/portfolio">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-gold-500 hover:bg-gold-400 text-sage-900 px-8 py-4 rounded-full font-semibold text-lg transition-colors duration-200 flex items-center space-x-2"
+                >
+                  <span>View Full Portfolio</span>
+                  <ArrowRight size={20} />
+                </motion.button>
+              </Link>
+              <Link href="/catalog">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="border-2 border-gold-500 hover:bg-gold-500 text-sage-900 px-8 py-4 rounded-full font-semibold text-lg transition-colors duration-200 flex items-center space-x-2"
+                >
+                  <span>Browse Products</span>
+                  <ArrowRight size={20} />
+                </motion.button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>

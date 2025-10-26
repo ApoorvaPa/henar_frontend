@@ -21,6 +21,7 @@ const Navbar = () => {
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Services', href: '/services' },
+    { name: 'Catalog', href: '/catalog' },
     { name: 'Portfolio', href: '/portfolio' },
     { name: 'Booking', href: '/booking' },
     { name: 'Testimonials', href: '/testimonials' },
@@ -69,14 +70,14 @@ const Navbar = () => {
               className="flex items-center space-x-1 text-sage-600 hover:text-maroon-600 transition-colors"
             >
               <Phone size={16} />
-              <span className="text-sm">+1 (234) 567-890</span>
+              <span className="text-sm">+91 9318435436</span>
             </a>
             <a
-              href="mailto:henarmehndi@gmail.com"
+              href="mailto:henar9813@gmail.com"
               className="flex items-center space-x-1 text-sage-600 hover:text-maroon-600 transition-colors"
             >
               <Mail size={16} />
-              <span className="text-sm">henarmehndi@gmail.com</span>
+              <span className="text-sm">henar9813@gmail.com</span>
             </a>
           </div>
 
@@ -116,14 +117,14 @@ const Navbar = () => {
                   className="flex items-center space-x-2 text-sage-600 hover:text-maroon-600 transition-colors"
                 >
                   <Phone size={16} />
-                  <span>+1 (234) 567-890</span>
+                  <span>+91 9318435436</span>
                 </a>
                 <a
-                  href="mailto:henarmehndi@gmail.com"
+                  href="mailto:henar9813@gmail.com"
                   className="flex items-center space-x-2 text-sage-600 hover:text-maroon-600 transition-colors"
                 >
                   <Mail size={16} />
-                  <span>henarmehndi@gmail.com</span>
+                  <span>henar9813@gmail.com</span>
                 </a>
               </div>
             </div>

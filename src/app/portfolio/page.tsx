@@ -39,7 +39,7 @@ export default function Portfolio() {
           <SectionTitle
             title="Featured Work"
             subtitle="Our Creations"
-            description="Browse through our diverse collection of mehndi designs, from traditional bridal patterns to modern minimalist styles."
+            description="Browse through our diverse collection of mehndi designs, from traditional bridal patterns to modern Hobbyist styles."
           />
           
           <Gallery items={portfolioItems} />
@@ -70,15 +70,15 @@ export default function Portfolio() {
                 count: "30+ Designs"
               },
               {
-                title: "Arabic Mehndi",
-                description: "Elegant Arabic patterns with flowing geometric elements",
-                image: "/images/categories/arabic.jpg",
+                title: "Festival Mehndi",
+                description: "Elegant Festival patterns with flowing geometric elements",
+                image: "/images/categories/Festival.jpg",
                 count: "25+ Designs"
               },
               {
-                title: "Minimal Mehndi",
+                title: "Hobby Mehndi",
                 description: "Subtle, modern designs for everyday elegance",
-                image: "/images/categories/minimal.jpg",
+                image: "/images/categories/Hobby.jpg",
                 count: "20+ Designs"
               }
             ].map((category, index) => (
@@ -191,7 +191,7 @@ export default function Portfolio() {
               },
               {
                 name: "Sarah Ahmed",
-                text: "Professional service and beautiful Arabic designs. Highly recommended for any special occasion.",
+                text: "Professional service and beautiful Festival designs. Highly recommended for any special occasion.",
                 rating: 5
               },
               {

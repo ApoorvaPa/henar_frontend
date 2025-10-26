@@ -118,9 +118,9 @@ export default function Testimonials() {
               },
               {
                 name: "Sarah Ahmed",
-                service: "Arabic Mehndi",
+                service: "Festival Mehndi",
                 rating: 5,
-                text: "Perfect Arabic mehndi design for my wedding. The patterns were intricate and beautiful. The henna lasted for weeks! The artist was very skilled and the design was exactly what I envisioned. Highly professional service and beautiful results.",
+                text: "Perfect Festival mehndi design for my wedding. The patterns were intricate and beautiful. The henna lasted for weeks! The artist was very skilled and the design was exactly what I envisioned. Highly professional service and beautiful results.",
                 location: "Los Angeles, CA"
               }
             ].map((testimonial, index) => (
@@ -185,13 +185,13 @@ export default function Testimonials() {
                 highlight: "Great for celebrations"
               },
               {
-                service: "Arabic Mehndi",
+                service: "Festival Mehndi",
                 count: "30+ Reviews",
                 rating: 4.9,
                 highlight: "Elegant traditional designs"
               },
               {
-                service: "Minimal Mehndi",
+                service: "Hobby Mehndi",
                 count: "25+ Reviews",
                 rating: 4.7,
                 highlight: "Subtle everyday elegance"

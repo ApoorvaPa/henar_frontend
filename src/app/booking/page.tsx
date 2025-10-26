@@ -147,13 +147,13 @@ export default function Booking() {
               {
                 icon: Phone,
                 title: "Phone",
-                description: "+1 (234) 567-890",
+                description: "+91 9318435436",
                 action: "Call Now"
               },
               {
                 icon: Mail,
                 title: "Email",
-                description: "henarmehndi@gmail.com",
+                description: "henar9813@gmail.com",
                 action: "Send Email"
               },
               {
