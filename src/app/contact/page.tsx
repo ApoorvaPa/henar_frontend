@@ -94,9 +94,9 @@ export default function Contact() {
               {
                 icon: Mail,
                 title: "Email",
-                description: "henar9813@gmail.com",
+                description: "henar9318@gmail.com",
                 action: "Send Email",
-                href: "mailto:henar9813@gmail.com"
+                href: "mailto:henar9318@gmail.com"
               },
               {
                 icon: MapPin,

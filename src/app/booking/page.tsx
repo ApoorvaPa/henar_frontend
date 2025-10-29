@@ -153,7 +153,7 @@ export default function Booking() {
               {
                 icon: Mail,
                 title: "Email",
-                description: "henar9813@gmail.com",
+                description: "henar9318@gmail.com",
                 action: "Send Email"
               },
               {

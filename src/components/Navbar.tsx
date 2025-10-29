@@ -73,11 +73,11 @@ const Navbar = () => {
               <span className="text-sm">+91 9318435436</span>
             </a>
             <a
-              href="mailto:henar9813@gmail.com"
+              href="mailto:henar9318@gmail.com"
               className="flex items-center space-x-1 text-sage-600 hover:text-maroon-600 transition-colors"
             >
               <Mail size={16} />
-              <span className="text-sm">henar9813@gmail.com</span>
+              <span className="text-sm">henar9318@gmail.com</span>
             </a>
           </div>
 
@@ -120,11 +120,11 @@ const Navbar = () => {
                   <span>+91 9318435436</span>
                 </a>
                 <a
-                  href="mailto:henar9813@gmail.com"
+                  href="mailto:henar9318@gmail.com"
                   className="flex items-center space-x-2 text-sage-600 hover:text-maroon-600 transition-colors"
                 >
                   <Mail size={16} />
-                  <span>henar9813@gmail.com</span>
+                  <span>henar9318@gmail.com</span>
                 </a>
               </div>
             </div>
