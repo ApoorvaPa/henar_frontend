@@ -77,17 +77,28 @@ const ServiceCard = ({ service, index }: ServiceCardProps) => {
           ))}
         </ul>
 
-        {/* CTA Button */}
-        <Link href={`/booking?service=${service.id}`}>
-          <motion.button
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            className="w-full bg-maroon-600 hover:bg-maroon-700 text-white py-3 rounded-lg font-semibold transition-colors duration-200"
-          >
-            Book This Service
-          </motion.button>
-        </Link>
-      </div>
+       {/* CTAs */}
+       <div className="flex flex-col sm:flex-row gap-3 mt-4">
+          <Link href={`/booking?service=${service.id}`} className="flex-1">
+            <motion.button
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.98 }}
+              className="w-full px-6 py-3 rounded-full font-semibold transition-all duration-200 shadow-md hover:shadow-lg border-2 border-maroon-600 text-maroon-600 hover:bg-black hover:text-white hover:border-black"
+
+              >
+              Book This Service
+            </motion.button>
+          </Link>
+          <Link href="/services" className="flex-1">
+            <motion.button
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.98 }}
+              className="w-full px-6 py-3 rounded-full font-semibold transition-all duration-200 shadow-md hover:shadow-lg border-2 border-maroon-600 text-maroon-600 hover:bg-black hover:text-white hover:border-black"
+            >
+              Explore More
+            </motion.button>
+          </Link>
+        </div>      </div>
     </motion.div>
   );
 };

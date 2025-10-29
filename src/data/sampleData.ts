@@ -64,15 +64,15 @@ export const services: Service[] = [
     title: 'Party Mehndi',
     description: 'Beautiful designs perfect for celebrations, festivals, and special occasions.',
     price: '₹2,000-4,000',
-    duration: '1-2 hours',
+    duration: '10 mins per hand',
     features: [
-      'Hand or foot designs',
+      'Hand designs',
       'Festival patterns',
       'Quick application',
       'Colorful options available',
       'Group bookings welcome'
     ],
-    image: '/images/party-mehndi.jpg',
+    image: '/images/partyheader.jpg',
     category: 'party'
   },
   {
@@ -80,15 +80,15 @@ export const services: Service[] = [
     title: 'Festival Mehndi',
     description: 'Elegant Festival-style henna designs with flowing patterns and geometric elements.',
     price: '₹3,200-6,000',
-    duration: '2-3 hours',
+    duration: '1-2 hours',
     features: [
-      'Traditional Festival patterns',
+      'Karwa Chauth, Diwali, Holi, etc.',
       'Geometric designs',
       'Hand and arm coverage',
       'Professional application',
-      'Long-lasting results'
+      'Special Discounts'
     ],
-    image: '/images/Festival-mehndi.jpg',
+    image: '/images/festivalheader.jpeg',
     category: 'Festival'
   },
   {
@@ -104,7 +104,7 @@ export const services: Service[] = [
       'Affordable pricing',
       'Easy maintenance'
     ],
-    image: '/images/Hobby-mehndi.jpg',
+    image: '/images/hobbyheader.jpg',
     category: 'Hobby'
   }
 ];

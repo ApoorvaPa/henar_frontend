@@ -23,10 +23,10 @@ export default function Services() {
             transition={{ duration: 0.8 }}
             className="space-y-6"
           >
-            <h1 className="text-4xl md:text-6xl font-serif font-bold">
+            <h1 className="text-4xl md:text-6xl font-serif font-bold text-amber-900">
               Our Services
             </h1>
-            <p className="text-xl md:text-2xl text-beige-200 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-amber-900 max-w-3xl mx-auto">
               Professional mehndi services tailored to make your special moments unforgettable.
             </p>
           </motion.div>

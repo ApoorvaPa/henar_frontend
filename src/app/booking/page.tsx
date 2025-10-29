@@ -84,13 +84,13 @@ export default function Booking() {
       </section>
 
       {/* Booking Information */}
-      <section className="py-20 bg-sage-900 text-white">
+      <section className="py-20 bg-sage-900 text-brown">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle
             title="Booking Information"
             subtitle="What to Expect"
             description="Everything you need to know about booking and preparing for your appointment."
-            className="text-white"
+            className="text-brown"
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
@@ -142,7 +142,7 @@ export default function Booking() {
             description="Have questions or need assistance? We're here to help."
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mt-12">
             {[
               {
                 icon: Phone,
@@ -155,12 +155,6 @@ export default function Booking() {
                 title: "Email",
                 description: "henar9318@gmail.com",
                 action: "Send Email"
-              },
-              {
-                icon: MapPin,
-                title: "Location",
-                description: "123 Art Street, Creative City",
-                action: "Get Directions"
               }
             ].map((contact, index) => (
               <motion.div

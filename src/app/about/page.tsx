@@ -22,10 +22,10 @@ export default function About() {
             transition={{ duration: 0.8 }}
             className="space-y-6"
           >
-            <h1 className="text-4xl md:text-6xl font-serif font-bold">
+            <h1 className="text-amber-950 text-4xl md:text-6xl font-serif font-bold">
               About Henar
             </h1>
-            <p className="text-xl md:text-2xl text-beige-200 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-amber-950 max-w-3xl mx-auto">
               Where tradition meets artistry, creating beautiful memories one design at a time.
             </p>
           </motion.div>
@@ -70,7 +70,7 @@ export default function About() {
             >
               <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/about-story.jpg"
+                  src="/images/artist.jpg"
                   alt="Mehndi artist at work"
                   width={500}
                   height={500}
@@ -146,7 +146,7 @@ export default function About() {
             >
               <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/about-experience.jpg"
+                  src="/images/mehndigroup.jpg"
                   alt="Professional mehndi application"
                   width={500}
                   height={500}
@@ -174,7 +174,7 @@ export default function About() {
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <div className="w-8 h-8 bg-gold-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-sage-900 font-bold text-sm">5+</span>
+                    <span className="text-sage-900 font-bold text-sm">15+</span>
                   </div>
                   <div>
                     <h4 className="font-semibold text-sage-900 mb-2">Years of Experience</h4>
@@ -184,7 +184,7 @@ export default function About() {
 
                 <div className="flex items-start space-x-4">
                   <div className="w-8 h-8 bg-gold-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-sage-900 font-bold text-sm">500+</span>
+                    <span className="text-sage-900 font-bold text-sm">15000+</span>
                   </div>
                   <div>
                     <h4 className="font-semibold text-sage-900 mb-2">Happy Clients</h4>
@@ -208,13 +208,13 @@ export default function About() {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-sage-900 text-white">
+      <section className="py-20 bg-sage-900 text-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle
             title="Our Process"
             subtitle="How We Work"
             description="From consultation to completion, we ensure a seamless and enjoyable experience."
-            className="text-white"
+            className="text-darkbrown"
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">

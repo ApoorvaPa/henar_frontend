@@ -75,12 +75,12 @@ export default function Catalog() {
             transition={{ duration: 0.8 }}
             className="space-y-6"
           >
-            <h1 className="text-4xl md:text-6xl font-serif font-bold flex items-center justify-center gap-3">
-              <Sparkles className="text-gold-400" size={48} />
+            <h1 className="text-4xl md:text-6xl font-serif font-bold flex items-center justify-center gap-3 text-amber-950">
+              <Sparkles className="text-amber-950" size={48} />
               Product Catalog
-              <Sparkles className="text-gold-400" size={48} />
+              <Sparkles className="text-amber-950" size={48} />
             </h1>
-            <p className="text-xl md:text-2xl text-beige-200 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-amber-950 max-w-3xl mx-auto">
               Discover our exquisite collection of mehndi designs, each crafted with precision and artistic excellence.
             </p>
           </motion.div>
