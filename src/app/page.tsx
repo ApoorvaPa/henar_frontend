@@ -189,7 +189,7 @@ export default function Home() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-gold-500 hover:bg-gold-400 text-sage-900 px-8 py-4 rounded-full font-semibold text-lg transition-colors duration-200 flex items-center space-x-2"
+                  className="bg-gold-500 hover:bg-gold-400 text-sage-900 px-10 py-5 rounded-full font-semibold text-lg transition-all duration-200 flex items-center space-x-2 shadow-xl hover:shadow-2xl ring-2 ring-gold-300 focus:outline-none focus-visible:ring-4 focus-visible:ring-gold-200"
                 >
                   <span>Book Now</span>
                   <ArrowRight size={20} />

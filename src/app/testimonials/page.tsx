@@ -53,7 +53,7 @@ export default function Testimonials() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="space-y-4"
             >
-              <div className="text-4xl font-serif font-bold text-maroon-600">200+</div>
+              <div className="text-4xl font-serif font-bold text-maroon-600">5000+</div>
               <p className="text-sage-600 text-lg">Reviews</p>
             </motion.div>
 

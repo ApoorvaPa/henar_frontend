@@ -82,21 +82,21 @@ const BookingForm = ({ preselectedService }: BookingFormProps) => {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      className="bg-white rounded-2xl shadow-lg p-8"
-    >
-      <div className="text-center mb-8">
-        <h2 className="text-3xl font-serif font-bold text-sage-900 mb-2">
-          Book Your Appointment
-        </h2>
-        <p className="text-sage-600">
-          Fill out the form below and we&apos;ll get back to you within 24 hours
-        </p>
-      </div>
+  initial={{ opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6 }}
+  className="bg-white rounded-2xl shadow-xl p-8"
+>
+  <div className="text-center mb-6">
+    <h2 className="text-3xl font-serif font-bold text-sage-900 mb-2">
+      Book Your Appointment
+    </h2>
+    <p className="text-sage-600">
+      Fill out the form below and we&apos;ll get back to you within 24 hours.
+    </p>
+  </div>
 
-      <form onSubmit={handleSubmit} className="space-y-6">
+  <form onSubmit={handleSubmit} className="space-y-5">
         {/* Personal Information */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
@@ -227,23 +227,22 @@ const BookingForm = ({ preselectedService }: BookingFormProps) => {
             placeholder="Any special requests, allergies, or additional information..."
           />
         </div>
-
         <motion.button
-          type="submit"
-          disabled={isSubmitting}
-          whileHover={{ scale: 1.02 }}
-          whileTap={{ scale: 0.98 }}
-          className="w-full bg-maroon-600 hover:bg-maroon-700 disabled:bg-sage-400 text-white py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center space-x-2"
-        >
-          {isSubmitting ? (
-            <>
-              <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
-              <span>Submitting...</span>
-            </>
-          ) : (
-            <span>Book Appointment</span>
-          )}
-        </motion.button>
+  type="submit"
+  disabled={isSubmitting}
+  whileHover={{ scale: 1.02 }}
+  whileTap={{ scale: 0.98 }}
+  className="w-full bg-white border-2 border-sage-900 text-sage-900 hover:bg-black hover:text-white disabled:bg-sage-200 disabled:border-sage-300 disabled:text-sage-500 py-4 rounded-lg font-bold text-lg transition-all duration-300 flex items-center justify-center space-x-2 shadow-md hover:shadow-xl"
+>
+  {isSubmitting ? (
+    <>
+      <div className="w-5 h-5 border-2 border-current border-t-transparent rounded-full animate-spin" />
+      <span>Submitting...</span>
+    </>
+  ) : (
+    <span>Book Appointment</span>
+  )}
+</motion.button>
       </form>
 
       <div className="mt-6 text-center">

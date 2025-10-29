@@ -107,15 +107,16 @@ const Hero = ({
             {subtitle}
           </motion.p>
 
-          {/* Main Title */}
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-white leading-tight"
-          >
-            {title}
-          </motion.h1>
+   {/* Main Title */}
+{/* Main Title */}
+<motion.h1
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6, delay: 0.3 }}
+  className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-white leading-tight backdrop-blur-sm bg-white/5 px-8 py-4 rounded-full inline-block"
+>
+  {title}
+</motion.h1>
 
           {/* Description */}
           <motion.p
@@ -129,21 +130,20 @@ const Hero = ({
 
           {/* Rating */}
           {showRating && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
-              className="flex items-center justify-center space-x-2 text-white"
-            >
-              <div className="flex space-x-1">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={20} className="fill-current" />
-                ))}
-              </div>
-              <span className="text-white font-medium">4.9/5 (200+ Reviews)</span>
-            </motion.div>
-          )}
-
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6, delay: 0.5 }}
+    className="flex items-center justify-center space-x-2 text-white backdrop-blur-md bg-white/10 px-6 py-3 rounded-full inline-flex mx-auto"
+  >
+    <div className="flex space-x-1">
+      {[...Array(5)].map((_, i) => (
+        <Star key={i} size={20} className="fill-current text-gold-400" />
+      ))}
+    </div>
+    <span className="text-white font-medium drop-shadow-lg">4.9/5 (200+ Reviews)</span>
+  </motion.div>
+)}
           {/* Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -151,28 +151,29 @@ const Hero = ({
             transition={{ duration: 0.6, delay: 0.6 }}
             className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 pt-8"
           >
-            <Link href={primaryButtonLink}>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gold-500 hover:bg-gold-400 text-white px-8 py-4 rounded-full font-semibold text-lg transition-colors duration-200 flex items-center space-x-2 shadow-lg"
-              >
-                <span>{primaryButtonText}</span>
-                <ArrowRight size={20} />
-              </motion.button>
-            </Link>
-
-            {secondaryButtonText && secondaryButtonLink && (
-              <Link href={secondaryButtonLink}>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="border-2 border-white text-white hover:bg-white hover:text-white px-8 py-4 rounded-full font-semibold text-lg transition-colors duration-200"
-                >
-                  {secondaryButtonText}
-                </motion.button>
-              </Link>
-            )}
+         
+         <Link href={primaryButtonLink}>
+  <motion.button
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.95 }}
+    className="bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-white px-10 py-5 rounded-full font-bold text-lg transition-all duration-300 flex items-center space-x-2 shadow-2xl hover:shadow-gold-500/50 ring-2 ring-white/30 hover:ring-white/50 focus:outline-none focus-visible:ring-4 focus-visible:ring-white/50 backdrop-blur-sm"
+  >
+    <span className="drop-shadow-lg">{primaryButtonText}</span>
+    <ArrowRight size={20} className="drop-shadow-lg" />
+  </motion.button>
+</Link>
+         
+{secondaryButtonText && secondaryButtonLink && (
+  <Link href={secondaryButtonLink}>
+    <motion.button
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      className="border-2 border-white/80 bg-transparent text-white hover:bg-white/20 hover:border-white hover:backdrop-blur-md px-10 py-5 rounded-full font-bold text-lg transition-all duration-300 shadow-xl hover:shadow-2xl hover:shadow-white/30 backdrop-blur-sm focus:outline-none focus-visible:ring-4 focus-visible:ring-white/50"
+    >
+      <span className="drop-shadow-lg">{secondaryButtonText}</span>
+    </motion.button>
+  </Link>
+)}
           </motion.div>
         </motion.div>
       </div>
