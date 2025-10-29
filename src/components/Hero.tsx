@@ -1,6 +1,7 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { useEffect, useMemo, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { ArrowRight, Star } from 'lucide-react';
 
@@ -13,6 +14,8 @@ interface HeroProps {
   secondaryButtonText?: string;
   secondaryButtonLink?: string;
   backgroundImage?: string;
+  backgroundImages?: string[];
+  slideIntervalMs?: number;
   showRating?: boolean;
 }
 
@@ -25,18 +28,61 @@ const Hero = ({
   secondaryButtonText,
   secondaryButtonLink,
   backgroundImage = '/images/hero-bg.jpg',
+  backgroundImages,
+  slideIntervalMs = 5500,
   showRating = false
 }: HeroProps) => {
+  const slides = useMemo(() => {
+    if (backgroundImages && backgroundImages.length > 0) return backgroundImages;
+    return [
+      backgroundImage ,
+      '/images/hero/mehndi1.jpg',
+      '/images/hero/mehndi2.jpg',
+      '/images/hero/mehndi3.jpg',
+      '/images/hero/mehndi4.jpg',
+      '/images/hero/mehndi5.jpg',
+    ];
+  }, [backgroundImage, backgroundImages]);
+
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    // Preload images to avoid flicker/jank on first reveal
+    slides.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+
+    const id = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % slides.length);
+    }, slideIntervalMs);
+    return () => clearInterval(id);
+  }, [slides.length, slideIntervalMs]);
+
   return (
     <section 
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
-      style={{
-        backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(${backgroundImage})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed'
-      }}
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black"
     >
+      {/* Background slideshow */}
+      <div className="absolute inset-0">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={slides[activeIndex]}
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `url(${slides[activeIndex]})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              willChange: 'opacity, transform'
+            }}
+            initial={{ opacity: 0, scale: 1.04 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 1.02 }}
+            transition={{ duration: 1.0, ease: [0.22, 0.61, 0.36, 1] }}
+          />
+        </AnimatePresence>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/40 to-black/55" />
+      </div>
       {/* Decorative elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-32 h-32 border border-gold-400/20 rounded-full"></div>
@@ -129,6 +175,18 @@ const Hero = ({
             )}
           </motion.div>
         </motion.div>
+      </div>
+
+      {/* Slide indicators */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 flex items-center gap-2">
+        {slides.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setActiveIndex(i)}
+            className={`h-2 rounded-full transition-all duration-300 ${activeIndex === i ? 'w-6 bg-gold-500' : 'w-2 bg-white/70 hover:bg-white'}`}
+            aria-label={`Go to slide ${i + 1}`}
+          />
+        ))}
       </div>
 
       {/* Scroll indicator */}
