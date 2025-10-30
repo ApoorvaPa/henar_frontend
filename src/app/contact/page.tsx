@@ -101,7 +101,7 @@ export default function Contact() {
               {
                 icon: MapPin,
                 title: "Location",
-                description: "123 Art Street, Creative City",
+                description: "India",
                 action: "Get Directions",
                 href: "#"
               },
