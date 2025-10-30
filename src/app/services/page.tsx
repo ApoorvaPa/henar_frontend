@@ -51,7 +51,7 @@ export default function Services() {
       </section>
 
       {/* Service Details */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white text-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle
             title="Service Details"

@@ -25,6 +25,36 @@ export default function Home() {
         showRating={true}
       />
 
+      {/* Services Preview
+      <section className="py-20 bg-beige-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionTitle
+            title="Our Services"
+            subtitle="What We Offer"
+            description="Choose from our range of professional mehndi services, each designed to make your special moments unforgettable."
+          />
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+            {services.map((service, index) => (
+              <ServiceCard key={service.id} service={service} index={index} />
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <Link href="/services">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-maroon-600 hover:bg-maroon-700 text-black px-8 py-4 rounded-full font-semibold text-lg transition-colors duration-200 flex items-center space-x-2 mx-auto"
+              >
+                <span>View All Services</span>
+                <ArrowRight size={20} />
+              </motion.button>
+            </Link>
+          </div>
+        </div>
+      </section> */}
+
       {/* Services Preview */}
       <section className="py-20 bg-beige-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -45,10 +75,10 @@ export default function Home() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-maroon-600 hover:bg-maroon-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-colors duration-200 flex items-center space-x-2 mx-auto"
+                className="bg-maroon-600 hover:bg-maroon-700 text-black px-8 py-4 rounded-full font-semibold text-lg transition-colors duration-200 flex items-center space-x-2 mx-auto"
               >
-                <span>View All Services</span>
-                <ArrowRight size={20} />
+                <span className="text-black">View All Services</span>
+                <ArrowRight size={20} className="text-black" />
               </motion.button>
             </Link>
           </div>
@@ -56,7 +86,7 @@ export default function Home() {
       </section>
 
       {/* Featured Portfolio */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white text-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle
             title="Featured Designs"
@@ -94,7 +124,7 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-sage-900 text-white">
+      <section className="py-20 bg-sage-900 text-darkbrown">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <motion.div
@@ -159,7 +189,7 @@ export default function Home() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-maroon-600 hover:bg-maroon-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-colors duration-200 flex items-center space-x-2 mx-auto"
+                className="bg-maroon-600 hover:bg-maroon-700 text-black px-8 py-4 rounded-full font-semibold text-lg transition-colors duration-200 flex items-center space-x-2 mx-auto"
               >
                 <span>Read More Reviews</span>
                 <ArrowRight size={20} />
@@ -170,7 +200,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-maroon-600 to-maroon-800 text-white">
+      <section className="py-20 bg-gradient-to-r from-maroon-600 to-maroon-800 text-black">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
