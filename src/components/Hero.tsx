@@ -57,7 +57,7 @@ const Hero = ({
       setActiveIndex((prev) => (prev + 1) % slides.length);
     }, slideIntervalMs);
     return () => clearInterval(id);
-  }, [slides.length, slideIntervalMs]);
+  }, [slides, slideIntervalMs]);
 
   return (
     <section 

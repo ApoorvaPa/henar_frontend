@@ -48,10 +48,13 @@ export async function POST(req: Request) {
     let data;
     try {
       data = BookingSchema.parse(body);
-    } catch (validationError: any) {
+    } catch (validationError) {
       console.error('Validation Error:', validationError);
+      const errorMessage = validationError instanceof z.ZodError 
+        ? validationError.issues[0]?.message || 'Invalid form data'
+        : 'Invalid form data';
       return NextResponse.json(
-        { ok: false, error: validationError.errors?.[0]?.message || 'Invalid form data' },
+        { ok: false, error: errorMessage },
         { status: 400 }
       );
     }
@@ -74,7 +77,7 @@ export async function POST(req: Request) {
     }
 
     return NextResponse.json({ ok: true });
-  } catch (err: any) {
+  } catch (err) {
     console.error('Error:', err);
     
     // Handle JSON parsing errors
@@ -85,8 +88,9 @@ export async function POST(req: Request) {
       );
     }
     
+    const errorMessage = err instanceof Error ? err.message : 'An unexpected error occurred';
     return NextResponse.json(
-      { ok: false, error: err.message || 'An unexpected error occurred' },
+      { ok: false, error: errorMessage },
       { status: 500 }
     );
   }

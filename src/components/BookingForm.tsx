@@ -66,9 +66,10 @@ const BookingForm = ({ preselectedService }: BookingFormProps) => {
           message: '',
         });
       }, 3000);
-    } catch (err: any) {
+    } catch (err) {
       console.error('Booking submission error:', err);
-      alert(err.message || 'Something went wrong. Please try again.');
+      const errorMessage = err instanceof Error ? err.message : 'Something went wrong. Please try again.';
+      alert(errorMessage);
     } finally {
       setIsSubmitting(false);
     }

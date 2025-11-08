@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import SectionTitle from '@/components/SectionTitle';
 import BookingForm from '@/components/BookingForm';
 import { services } from '@/data/sampleData';
-import { Calendar, Clock, Phone, Mail, MapPin, CheckCircle } from 'lucide-react';
+import { Calendar, Clock, Phone, Mail, CheckCircle } from 'lucide-react';
 
 export default function Booking() {
   return (

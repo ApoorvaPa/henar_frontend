@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { Check, Clock, DollarSign } from 'lucide-react';
+import { Check, Clock } from 'lucide-react';
 import Link from 'next/link';
 
 interface ServiceCardProps {
