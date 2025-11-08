@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import SectionTitle from '@/components/SectionTitle';
 import { useState } from 'react';
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
+import { Phone, Mail, Clock, Send, CheckCircle } from 'lucide-react';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -50,7 +50,7 @@ export default function Contact() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-maroon-600 to-maroon-800 text-white overflow-hidden">
+      <section className="relative py-20 bg-gradient-to-r from-maroon-600 to-maroon-800 text-black overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-32 h-32 border border-gold-400/20 rounded-full"></div>
           <div className="absolute bottom-20 right-10 w-24 h-24 border border-beige-400/20 rounded-full"></div>
@@ -63,10 +63,10 @@ export default function Contact() {
             transition={{ duration: 0.8 }}
             className="space-y-6"
           >
-            <h1 className="text-4xl md:text-6xl font-serif font-bold">
+            <h1 className="text-4xl md:text-6xl font-serif font-bold text-black">
               Contact Us
             </h1>
-            <p className="text-xl md:text-2xl text-beige-200 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-black max-w-3xl mx-auto">
               Get in touch with us for bookings, inquiries, or any questions about our mehndi services.
             </p>
           </motion.div>
@@ -80,16 +80,17 @@ export default function Contact() {
             title="Get in Touch"
             subtitle="Contact Information"
             description="Multiple ways to reach us. We're here to help with all your mehndi needs."
+            className="text-black"
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
             {[
               {
                 icon: Phone,
                 title: "Phone",
                 description: "+91 9318435436",
                 action: "Call Now",
-                href: "tel:+1234567890"
+                href: "tel:+919318435436"
               },
               {
                 icon: Mail,
@@ -97,13 +98,6 @@ export default function Contact() {
                 description: "henar9318@gmail.com",
                 action: "Send Email",
                 href: "mailto:henar9318@gmail.com"
-              },
-              {
-                icon: MapPin,
-                title: "Location",
-                description: "India",
-                action: "Get Directions",
-                href: "#"
               },
               {
                 icon: Clock,
@@ -123,10 +117,10 @@ export default function Contact() {
                 <div className="w-16 h-16 bg-maroon-100 rounded-full flex items-center justify-center mx-auto mb-6">
                   <contact.icon size={32} className="text-maroon-600" />
                 </div>
-                <h3 className="text-xl font-serif font-bold text-sage-900 mb-2">
+                <h3 className="text-xl font-serif font-bold text-black mb-2">
                   {contact.title}
                 </h3>
-                <p className="text-sage-600 mb-4">
+                <p className="text-black mb-4">
                   {contact.description}
                 </p>
                 <a
@@ -148,6 +142,7 @@ export default function Contact() {
             title="Send Us a Message"
             subtitle="Contact Form"
             description="Fill out the form below and we'll get back to you within 24 hours."
+            className="text-black"
           />
 
           {isSubmitted ? (
@@ -159,13 +154,13 @@ export default function Contact() {
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <CheckCircle className="w-8 h-8 text-green-500" />
               </div>
-              <h3 className="text-2xl font-serif font-bold text-sage-900 mb-2">
+              <h3 className="text-2xl font-serif font-bold text-black mb-2">
                 Message Sent Successfully!
               </h3>
-              <p className="text-sage-600 mb-4">
+              <p className="text-black mb-4">
                 Thank you for your message. We&apos;ll get back to you within 24 hours.
               </p>
-              <p className="text-sm text-sage-500">
+              <p className="text-sm text-black">
                 You can also reach us directly at +91 9318435436
               </p>
             </motion.div>
@@ -179,7 +174,7 @@ export default function Contact() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-sage-700 font-medium mb-2">
+                    <label className="block text-black font-medium mb-2">
                       Full Name *
                     </label>
                     <input
@@ -194,7 +189,7 @@ export default function Contact() {
                   </div>
 
                   <div>
-                    <label className="block text-sage-700 font-medium mb-2">
+                    <label className="block text-black font-medium mb-2">
                       Email Address *
                     </label>
                     <input
@@ -211,7 +206,7 @@ export default function Contact() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-sage-700 font-medium mb-2">
+                    <label className="block text-black font-medium mb-2">
                       Phone Number
                     </label>
                     <input
@@ -225,7 +220,7 @@ export default function Contact() {
                   </div>
 
                   <div>
-                    <label className="block text-sage-700 font-medium mb-2">
+                    <label className="block text-black font-medium mb-2">
                       Subject *
                     </label>
                     <select
@@ -246,7 +241,7 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label className="block text-sage-700 font-medium mb-2">
+                  <label className="block text-black font-medium mb-2">
                     Message *
                   </label>
                   <textarea
@@ -286,13 +281,13 @@ export default function Contact() {
       </section>
 
       {/* Social Media */}
-      <section className="py-20 bg-sage-900 text-white">
+      <section className="py-20 bg-beige-50 text-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle
             title="Follow Us"
             subtitle="Social Media"
             description="Stay connected with us on social media for design inspiration, tips, and updates."
-            className="text-white"
+            className="text-black"
           />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
@@ -321,15 +316,15 @@ export default function Contact() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`bg-gradient-to-r ${social.color} rounded-2xl p-8 text-center`}
+                className="bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-shadow duration-300 border border-beige-200"
               >
-                <h3 className="text-xl font-serif font-bold text-white mb-2">
+                <h3 className="text-xl font-serif font-bold text-black mb-2">
                   {social.platform}
                 </h3>
-                <p className="text-white/90 mb-4">
+                <p className="text-black mb-4">
                   {social.handle}
                 </p>
-                <p className="text-white/80 text-sm leading-relaxed">
+                <p className="text-black text-sm leading-relaxed">
                   {social.description}
                 </p>
               </motion.div>
@@ -345,6 +340,7 @@ export default function Contact() {
             title="Frequently Asked Questions"
             subtitle="Quick Answers"
             description="Find answers to common questions about our services and booking process."
+            className="text-black"
           />
 
           <div className="space-y-6 mt-12">
@@ -377,10 +373,10 @@ export default function Contact() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white rounded-2xl p-6 shadow-lg"
               >
-                <h3 className="text-lg font-serif font-bold text-sage-900 mb-3">
+                <h3 className="text-lg font-serif font-bold text-black mb-3">
                   {faq.question}
                 </h3>
-                <p className="text-sage-600 leading-relaxed">
+                <p className="text-black leading-relaxed">
                   {faq.answer}
                 </p>
               </motion.div>
@@ -398,10 +394,10 @@ export default function Contact() {
             transition={{ duration: 0.6 }}
             className="space-y-6"
           >
-            <h2 className="text-4xl md:text-5xl font-serif font-bold">
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-black">
               Ready to Get Started?
             </h2>
-            <p className="text-xl text-sage-800 max-w-2xl mx-auto">
+            <p className="text-xl text-black max-w-2xl mx-auto">
               Don&apos;t wait! Book your consultation today and let us create beautiful memories for your special occasion.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
