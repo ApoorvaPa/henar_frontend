@@ -21,7 +21,6 @@ export interface PortfolioItem {
 export interface Testimonial {
   id: string;
   name: string;
-  location: string;
   rating: number;
   text: string;
   image: string;
@@ -190,7 +189,6 @@ export const testimonials: Testimonial[] = [
   {
     id: '1',
     name: 'Priya Sharma',
-    location: 'New York, NY',
     rating: 5,
     text: 'Absolutely stunning work! The bridal mehndi design was beyond my expectations. The artist was professional, punctual, and incredibly talented. Highly recommended!',
     image: '/images/testimonials/priya.jpg',
@@ -199,7 +197,6 @@ export const testimonials: Testimonial[] = [
   {
     id: '2',
     name: 'Sarah Ahmed',
-    location: 'Los Angeles, CA',
     rating: 5,
     text: 'Perfect Festival mehndi design for my wedding. The patterns were intricate and beautiful. The henna lasted for weeks! Thank you for making my day special.',
     image: '/images/testimonials/sarah.jpg',
@@ -208,7 +205,6 @@ export const testimonials: Testimonial[] = [
   {
     id: '3',
     name: 'Maya Patel',
-    location: 'Chicago, IL',
     rating: 5,
     text: 'Great experience for our Diwali party! The artist was friendly and created beautiful designs for all of us. Will definitely book again for future celebrations.',
     image: '/images/testimonials/maya.jpg',
@@ -217,7 +213,6 @@ export const testimonials: Testimonial[] = [
   {
     id: '4',
     name: 'Jennifer Kim',
-    location: 'Seattle, WA',
     rating: 5,
     text: 'Love the Hobby designs! Perfect for my office environment. The artist understood exactly what I wanted and delivered beautifully. Professional and affordable.',
     image: '/images/testimonials/jennifer.jpg',
@@ -226,7 +221,6 @@ export const testimonials: Testimonial[] = [
   {
     id: '5',
     name: 'Fatima Ali',
-    location: 'Houston, TX',
     rating: 5,
     text: 'Exceptional bridal mehndi service! The design was unique and the application was flawless. Made my wedding day even more memorable. Thank you!',
     image: '/images/testimonials/fatima.jpg',
@@ -235,7 +229,6 @@ export const testimonials: Testimonial[] = [
   {
     id: '6',
     name: 'Lisa Johnson',
-    location: 'Miami, FL',
     rating: 5,
     text: 'Amazing Festival mehndi work! The artist was very skilled and the design was exactly what I envisioned. Highly professional service and beautiful results.',
     image: '/images/testimonials/lisa.jpg',

@@ -16,7 +16,7 @@ export default function Testimonials() {
           <div className="absolute bottom-20 right-10 w-24 h-24 border border-beige-400/20 rounded-full"></div>
         </div>
         
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-black">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -26,7 +26,7 @@ export default function Testimonials() {
             <h1 className="text-4xl md:text-6xl font-serif font-bold">
               Client Testimonials
             </h1>
-            <p className="text-xl md:text-2xl text-beige-200 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-darkbrown text-black-200 max-w-3xl mx-auto">
               Hear from our satisfied clients about their experience with our mehndi artistry.
             </p>
           </motion.div>
@@ -36,7 +36,7 @@ export default function Testimonials() {
       {/* Stats Section */}
       <section className="py-20 bg-beige-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center text-black">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -98,13 +98,13 @@ export default function Testimonials() {
       </section>
 
       {/* Featured Testimonials */}
-      <section className="py-20 bg-sage-900 text-white">
+      <section className="py-20 bg-sage-900 text-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle
             title="Featured Reviews"
             subtitle="Standout Experiences"
             description="Some of our most memorable client experiences and feedback."
-            className="text-white"
+            className="text-black"
           />
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12">
@@ -113,15 +113,13 @@ export default function Testimonials() {
                 name: "Priya Sharma",
                 service: "Bridal Mehndi",
                 rating: 5,
-                text: "The bridal mehndi design was absolutely stunning! Every detail was perfect and it lasted for weeks. The artist was professional, punctual, and incredibly talented. She made my wedding day even more special. I couldn't have asked for a better experience.",
-                location: "New York, NY"
+                text: "The bridal mehndi design was absolutely stunning! Every detail was perfect and it lasted for weeks. The artist was professional, punctual, and incredibly talented. She made my wedding day even more special. I couldn't have asked for a better experience."
               },
               {
                 name: "Sarah Ahmed",
                 service: "Festival Mehndi",
                 rating: 5,
-                text: "Perfect Festival mehndi design for my wedding. The patterns were intricate and beautiful. The henna lasted for weeks! The artist was very skilled and the design was exactly what I envisioned. Highly professional service and beautiful results.",
-                location: "Los Angeles, CA"
+                text: "Perfect Festival mehndi design for my wedding. The patterns were intricate and beautiful. The henna lasted for weeks! The artist was very skilled and the design was exactly what I envisioned. Highly professional service and beautiful results."
               }
             ].map((testimonial, index) => (
               <motion.div
@@ -147,9 +145,6 @@ export default function Testimonials() {
                     <h4 className="font-semibold text-gold-400 text-lg">
                       {testimonial.name}
                     </h4>
-                    <p className="text-beige-300 text-sm">
-                      {testimonial.location}
-                    </p>
                   </div>
                   <span className="bg-gold-500 text-sage-900 px-4 py-2 rounded-full text-sm font-semibold">
                     {testimonial.service}
@@ -230,7 +225,7 @@ export default function Testimonials() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-maroon-600 to-maroon-800 text-white">
+      <section className="py-20 bg-gradient-to-r from-maroon-600 to-maroon-800 text-black">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -247,13 +242,13 @@ export default function Testimonials() {
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
               <a
                 href="/booking"
-                className="bg-gold-500 hover:bg-gold-400 text-sage-900 px-8 py-4 rounded-full font-semibold text-lg transition-colors duration-200"
+                className="border-2 border-darkbrown bg-gold-500 hover:bg-gold-400 text-sage-900 px-8 py-4 rounded-full font-semibold text-lg transition-colors duration-200"
               >
                 Book Your Appointment
               </a>
               <a
                 href="/portfolio"
-                className="border-2 border-white text-white hover:bg-white hover:text-sage-900 px-8 py-4 rounded-full font-semibold text-lg transition-colors duration-200"
+                className="border-2 border-darkbrown text-black hover:bg-white hover:text-sage-900 px-8 py-4 rounded-full font-semibold text-lg transition-colors duration-200"
               >
                 View Our Work
               </a>

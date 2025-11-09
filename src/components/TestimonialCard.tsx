@@ -8,7 +8,6 @@ interface TestimonialCardProps {
   testimonial: {
     id: string;
     name: string;
-    location: string;
     rating: number;
     text: string;
     image: string;
@@ -68,7 +67,6 @@ const TestimonialCard = ({ testimonial, index }: TestimonialCardProps) => {
         </div>
         <div>
           <h4 className="font-semibold text-sage-900">{testimonial.name}</h4>
-          <p className="text-sage-500 text-sm">{testimonial.location}</p>
         </div>
       </div>
     </motion.div>
