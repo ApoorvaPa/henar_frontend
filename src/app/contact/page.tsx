@@ -290,44 +290,66 @@ export default function Contact() {
             className="text-black"
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
             {[
               {
                 platform: "Instagram",
-                handle: "@Henar_official",
+                handle: "@henar.in",
                 description: "Follow us for daily design inspiration and behind-the-scenes content.",
-                color: "from-pink-500 to-purple-600"
+                url: "https://www.instagram.com/henar.in?igsh=ZnA2aDZucnpidmR5"
               },
               {
                 platform: "Facebook",
-                handle: "Henar Official",
+                handle: "Henar Mehndi Art",
                 description: "Connect with us and see client reviews and testimonials.",
-                color: "from-blue-500 to-blue-700"
+                url: "https://www.facebook.com/share/1DDeX8q6hR/"
+              },
+              {
+                platform: "Twitter/X",
+                handle: "@Henarmehndiart",
+                description: "Get updates, tips, and connect with our community.",
+                url: "https://x.com/Henarmehndiart?t=PRevqOw6uAoPOXSfi1BGng&s=03"
+              },
+              {
+                platform: "Pinterest",
+                handle: "henar mehndi art",
+                description: "Browse our design collections and get inspired.",
+                url: "https://pin.it/5oGK7DIKU"
+              },
+              {
+                platform: "Quora",
+                handle: "Henar Best Mehndi Art",
+                description: "Read our answers and insights about mehndi art.",
+                url: "https://www.quora.com/profile/Henar-Best-Mehndi-Ar"
               },
               {
                 platform: "WhatsApp",
                 handle: "+91 9318435436",
                 description: "Quick booking and instant responses to your queries.",
-                color: "from-green-500 to-green-700"
+                url: "https://wa.me/919318435436"
               }
             ].map((social, index) => (
-              <motion.div
+              <motion.a
                 key={social.platform}
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-shadow duration-300 border border-beige-200"
+                whileHover={{ y: -5 }}
+                className="bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 border border-beige-200 block"
               >
                 <h3 className="text-xl font-serif font-bold text-black mb-2">
                   {social.platform}
                 </h3>
-                <p className="text-black mb-4">
+                <p className="text-black mb-4 font-medium">
                   {social.handle}
                 </p>
                 <p className="text-black text-sm leading-relaxed">
                   {social.description}
                 </p>
-              </motion.div>
+              </motion.a>
             ))}
           </div>
         </div>

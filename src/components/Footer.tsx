@@ -1,8 +1,9 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, Instagram, Facebook, Twitter } from 'lucide-react';
+import { Phone, Mail, Instagram, Facebook, Twitter, Share2 } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -23,9 +24,10 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { name: 'Instagram', href: '#', icon: Instagram },
-    { name: 'Facebook', href: '#', icon: Facebook },
-    { name: 'Twitter', href: '#', icon: Twitter },
+    { name: 'Instagram', href: 'https://www.instagram.com/henar.in?igsh=ZnA2aDZucnpidmR5', icon: Instagram },
+    { name: 'Facebook', href: 'https://www.facebook.com/share/1DDeX8q6hR/', icon: Facebook },
+    { name: 'Twitter', href: 'https://x.com/Henarmehndiart?t=PRevqOw6uAoPOXSfi1BGng&s=03', icon: Twitter },
+    { name: 'Pinterest', href: 'https://pin.it/5oGK7DIKU', icon: Share2 },
   ];
 
   return (
@@ -39,9 +41,15 @@ const Footer = () => {
             transition={{ duration: 0.6 }}
             className="lg:col-span-1"
           >
-            <h3 className="text-2xl font-serif font-bold text-gold-400 mb-4">
-              Henar
-            </h3>
+            <Link href="/" className="inline-block mb-6">
+              <Image
+                src="/Logo.png"
+                alt="Henar Logo"
+                width={180}
+                height={60}
+                className="h-16 md:h-20 w-auto object-contain"
+              />
+            </Link>
             <p className="text-beige-200 mb-6 leading-relaxed">
               Creating beautiful, intricate henna designs for your special moments. 
               Traditional artistry meets modern elegance.
@@ -55,10 +63,7 @@ const Footer = () => {
                 <Mail size={16} className="text-gold-400" />
                 <span className="text-beige-200">henar9318@gmail.com</span>
               </div>
-              <div className="flex items-center space-x-3">
-                <MapPin size={16} className="text-gold-400" />
-                <span className="text-beige-200">123 Art Street, Creative City</span>
-              </div>
+          
             </div>
           </motion.div>
 
@@ -122,9 +127,12 @@ const Footer = () => {
                 <motion.a
                   key={social.name}
                   href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                   className="p-2 bg-sage-800 rounded-full text-beige-200 hover:text-gold-400 hover:bg-sage-700 transition-colors duration-200"
+                  aria-label={`Follow us on ${social.name}`}
                 >
                   <social.icon size={20} />
                 </motion.a>

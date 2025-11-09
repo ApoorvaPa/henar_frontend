@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Phone, Mail } from 'lucide-react';
@@ -39,14 +40,21 @@ const Navbar = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-30 py-2">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="text-2xl font-serif font-bold text-maroon-700"
+              className="flex items-center"
             >
-              Henar
+              <Image
+                src="/Logo.png"
+                alt="Henar Logo"
+                width={180}
+                height={60}
+                className="h-14 md:h-16 w-auto object-contain"
+                priority
+              />
             </motion.div>
           </Link>
 

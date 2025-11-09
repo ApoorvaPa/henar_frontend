@@ -105,13 +105,13 @@ export default function Services() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 bg-sage-900 text-white">
+      <section className="py-20 bg-sage-900 text-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle
             title="Service Pricing"
             subtitle="Investment"
             description="Transparent pricing for all our services. Contact us for custom quotes."
-            className="text-white"
+            className="text-black"
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
@@ -126,7 +126,7 @@ export default function Services() {
                 <h3 className="text-xl font-serif font-bold text-gold-400 mb-2">
                   {service.title}
                 </h3>
-                <div className="text-3xl font-bold text-white mb-4">
+                <div className="text-3xl font-bold text-red mb-4">
                   {service.price}
                 </div>
                 <div className="text-beige-200 mb-6">

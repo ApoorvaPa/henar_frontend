@@ -37,7 +37,7 @@ export default function RootLayout({
         className={`${inter.variable} ${playfair.variable} font-sans antialiased`}
       >
         <Navbar />
-        <main className="pt-16">
+        <main className="pt-20 md:pt-24">
           {children}
         </main>
         <Footer />
