@@ -40,7 +40,7 @@ const Navbar = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-30 py-2">
+        <div className="flex justify-between items-center h-20 md:h-24 py-2 md:py-3">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <motion.div
@@ -52,7 +52,7 @@ const Navbar = () => {
                 alt="Henar Logo"
                 width={180}
                 height={60}
-                className="h-14 md:h-16 w-auto object-contain"
+                className="h-12 sm:h-14 md:h-16 w-auto object-contain"
                 priority
               />
             </motion.div>
