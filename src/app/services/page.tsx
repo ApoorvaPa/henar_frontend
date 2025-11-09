@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import SectionTitle from '@/components/SectionTitle';
 import ServiceCard from '@/components/ServiceCard';
 import { services } from '@/data/sampleData';
-import { CheckCircle, Clock, DollarSign, Star } from 'lucide-react';
+import { CheckCircle, Clock, CreditCard, Star } from 'lucide-react';
 
 export default function Services() {
   return (
@@ -72,7 +72,7 @@ export default function Services() {
                 description: "We work around your schedule to ensure convenience and comfort."
               },
               {
-                icon: DollarSign,
+                icon: CreditCard,
                 title: "Transparent Pricing",
                 description: "Clear, upfront pricing with no hidden fees or surprises."
               },
