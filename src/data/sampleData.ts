@@ -492,5 +492,200 @@ export const products: Product[] = [
     subCategory: 'Pakistani Bridal',
     inStock: true,
     rating: 4
+  },
+
+  // FESTIVAL MEHNDI - DIWALI SUBCATEGORY
+  {
+    id: 'prod-22',
+    name: 'Diwali Celebration Mehndi',
+    description: 'Beautiful Diwali mehndi design with traditional patterns, diya motifs, and festive elements perfect for the festival of lights.',
+    price: '₹3,500',
+    originalPrice: '₹4,500',
+    image: '/images/festivalheader.jpeg',
+    masterCategory: 'festival',
+    subCategory: 'Diwali Festival',
+    inStock: true,
+    rating: 5,
+    featured: true
+  },
+  {
+    id: 'prod-23',
+    name: 'Traditional Diwali Design',
+    description: 'Classic Diwali mehndi featuring intricate patterns, lotus motifs, and elegant borders for festive celebrations.',
+    price: '₹3,200',
+    image: '/images/floralfestival.jpg',
+    masterCategory: 'festival',
+    subCategory: 'Diwali Festival',
+    inStock: true,
+    rating: 4
+  },
+
+  // FESTIVAL MEHNDI - KARWA CHAUTH SUBCATEGORY
+  {
+    id: 'prod-24',
+    name: 'Karwa Chauth Special Mehndi',
+    description: 'Elegant Karwa Chauth mehndi design with moon motifs, traditional patterns, and romantic elements for this special occasion.',
+    price: '₹4,000',
+    image: '/images/elegant.jpg',
+    masterCategory: 'festival',
+    subCategory: 'Karwa Chauth',
+    inStock: true,
+    rating: 5,
+    featured: true
+  },
+
+  // FESTIVAL MEHNDI - HOLI SUBCATEGORY
+  {
+    id: 'prod-25',
+    name: 'Holi Festival Mehndi',
+    description: 'Vibrant Holi mehndi design with colorful patterns, playful motifs, and festive elements perfect for the spring festival.',
+    price: '₹3,800',
+    image: '/images/mehndigroup.jpg',
+    masterCategory: 'festival',
+    subCategory: 'Holi Festival',
+    inStock: true,
+    rating: 4
+  },
+
+  // FESTIVAL MEHNDI - EID SUBCATEGORY
+  {
+    id: 'prod-26',
+    name: 'Eid Celebration Mehndi',
+    description: 'Beautiful Eid mehndi design with traditional Islamic patterns, geometric motifs, and elegant designs for Eid celebrations.',
+    price: '₹4,200',
+    image: '/images/eid.jpg',
+    masterCategory: 'festival',
+    subCategory: 'Eid Festival',
+    inStock: true,
+    rating: 5
+  },
+
+  // PARTY MEHNDI - WEDDING PARTY SUBCATEGORY
+  {
+    id: 'prod-27',
+    name: 'Wedding Party Mehndi',
+    description: 'Stunning wedding party mehndi design with elegant patterns perfect for wedding celebrations and sangeet ceremonies.',
+    price: '₹3,000',
+    originalPrice: '₹4,000',
+    image: '/images/partyheader.jpg',
+    masterCategory: 'party',
+    subCategory: 'Wedding Party',
+    inStock: true,
+    rating: 5,
+    featured: true
+  },
+  {
+    id: 'prod-28',
+    name: 'Sangeet Party Design',
+    description: 'Beautiful sangeet party mehndi with dance motifs, musical patterns, and celebration-themed designs.',
+    price: '₹3,500',
+    image: '/images/contemporary.jpg',
+    masterCategory: 'party',
+    subCategory: 'Wedding Party',
+    inStock: true,
+    rating: 4
+  },
+
+  // PARTY MEHNDI - BIRTHDAY PARTY SUBCATEGORY
+  {
+    id: 'prod-29',
+    name: 'Birthday Party Mehndi',
+    description: 'Fun and festive birthday party mehndi design with playful patterns and celebratory motifs perfect for birthday celebrations.',
+    price: '₹2,500',
+    image: '/images/mehndigroup.jpg',
+    masterCategory: 'party',
+    subCategory: 'Birthday Party',
+    inStock: true,
+    rating: 4
+  },
+
+  // PARTY MEHNDI - ANNIVERSARY PARTY SUBCATEGORY
+  {
+    id: 'prod-30',
+    name: 'Anniversary Celebration Mehndi',
+    description: 'Romantic anniversary mehndi design with heart motifs, couple patterns, and elegant designs for special anniversaries.',
+    price: '₹3,200',
+    image: '/images/floralfestival.jpg',
+    masterCategory: 'party',
+    subCategory: 'Anniversary Party',
+    inStock: true,
+    rating: 5
+  },
+
+  // PARTY MEHNDI - CELEBRATION PARTY SUBCATEGORY
+  {
+    id: 'prod-31',
+    name: 'General Celebration Mehndi',
+    description: 'Versatile celebration mehndi design suitable for any party or special occasion with elegant and festive patterns.',
+    price: '₹2,800',
+    image: '/images/partyheader.jpg',
+    masterCategory: 'party',
+    subCategory: 'Celebration Party',
+    inStock: true,
+    rating: 4
+  },
+
+  // HOBBY MEHNDI - MINIMALIST SUBCATEGORY
+  {
+    id: 'prod-32',
+    name: 'Minimalist Hobby Mehndi',
+    description: 'Simple and elegant minimalist mehndi design with clean lines and subtle patterns perfect for everyday wear.',
+    price: '₹1,500',
+    originalPrice: '₹2,000',
+    image: '/images/hobbyheader.jpg',
+    masterCategory: 'hobby',
+    subCategory: 'Minimalist Hobby',
+    inStock: true,
+    rating: 5,
+    featured: true
+  },
+  {
+    id: 'prod-33',
+    name: 'Simple Minimalist Design',
+    description: 'Clean and simple minimalist mehndi with delicate patterns and understated elegance for casual occasions.',
+    price: '₹1,200',
+    image: '/images/normal.jpg',
+    masterCategory: 'hobby',
+    subCategory: 'Minimalist Hobby',
+    inStock: true,
+    rating: 4
+  },
+
+  // HOBBY MEHNDI - OFFICE-FRIENDLY SUBCATEGORY
+  {
+    id: 'prod-34',
+    name: 'Office-Friendly Mehndi',
+    description: 'Professional and subtle office-friendly mehndi design with discreet patterns perfect for workplace settings.',
+    price: '₹1,800',
+    image: '/images/office.jpg',
+    masterCategory: 'hobby',
+    subCategory: 'Office-Friendly',
+    inStock: true,
+    rating: 5,
+    featured: true
+  },
+  {
+    id: 'prod-35',
+    name: 'Professional Hobby Design',
+    description: 'Elegant professional mehndi with sophisticated patterns suitable for business environments and formal settings.',
+    price: '₹2,000',
+    image: '/images/hobbyheader.jpg',
+    masterCategory: 'hobby',
+    subCategory: 'Office-Friendly',
+    inStock: true,
+    rating: 4
+  },
+
+  // HOBBY MEHNDI - CASUAL HOBBY SUBCATEGORY
+  {
+    id: 'prod-36',
+    name: 'Casual Hobby Mehndi',
+    description: 'Relaxed and comfortable casual mehndi design with simple patterns perfect for everyday activities and leisure time.',
+    price: '₹1,400',
+    image: '/images/normal.jpg',
+    masterCategory: 'hobby',
+    subCategory: 'Casual Hobby',
+    inStock: true,
+    rating: 4
   }
 ];

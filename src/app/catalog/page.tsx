@@ -230,7 +230,7 @@ export default function Catalog() {
                   }}
                   className={`px-6 py-2 rounded-full font-semibold transition-all duration-200 ${
                     selectedMasterCategory === category.id
-                      ? 'bg-maroon-600 text-white shadow-lg scale-105'
+                      ? 'bg-black text-white shadow-lg scale-105'
                       : 'bg-beige-100 text-sage-700 hover:bg-maroon-100 hover:text-maroon-600'
                   }`}
                 >
@@ -248,7 +248,7 @@ export default function Catalog() {
                     onClick={() => setSelectedSubCategory(subCat.id)}
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
                       selectedSubCategory === subCat.id
-                        ? 'bg-gold-500 text-sage-900 shadow-md scale-105'
+                        ? 'bg-black text-white shadow-md scale-105'
                         : 'bg-white text-sage-700 hover:bg-gold-100'
                     }`}
                   >
@@ -358,7 +358,7 @@ export default function Catalog() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-maroon-600 to-maroon-800 text-white">
+      <section className="py-20 bg-gradient-to-r from-maroon-600 to-maroon-800 text-amber-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -366,22 +366,22 @@ export default function Catalog() {
             transition={{ duration: 0.6 }}
             className="space-y-6"
           >
-            <h2 className="text-4xl md:text-5xl font-serif font-bold">
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-amber-900">
               Need Something Custom?
             </h2>
-            <p className="text-xl text-beige-200 max-w-2xl mx-auto">
+            <p className="text-xl text-amber-900 max-w-2xl mx-auto">
               We can create a unique mehndi design tailored specifically to your vision and occasion.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
               <a
                 href="/booking"
-                className="bg-gold-500 hover:bg-gold-400 text-sage-900 px-8 py-4 rounded-full font-semibold text-lg transition-colors duration-200"
+                className="bg-gold-500 hover:bg-gold-400 text-amber-900 px-8 py-4 rounded-full font-semibold text-lg transition-colors duration-200"
               >
                 Book Consultation
               </a>
               <a
                 href="/contact"
-                className="border-2 border-white text-white hover:bg-white hover:text-sage-900 px-8 py-4 rounded-full font-semibold text-lg transition-colors duration-200"
+                className="border-2 border-amber-900 text-amber-900 hover:bg-amber-900 hover:text-white px-8 py-4 rounded-full font-semibold text-lg transition-colors duration-200"
               >
                 Contact Us
               </a>
