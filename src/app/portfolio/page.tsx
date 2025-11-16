@@ -263,57 +263,13 @@ export default function Portfolio() {
       </section>
 
       {/* Testimonials Preview (Stats Section) */}
-      <section className="py-20 bg-white relative overflow-hidden">
-        {/* Animated Background Elements */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <motion.div
-            className="absolute top-20 left-20 w-64 h-64 bg-yellow-300 rounded-full opacity-20 blur-3xl"
-            animate={{
-              y: [0, -40, 0],
-              x: [0, 30, 0],
-              scale: [1, 1.2, 1],
-            }}
-            transition={{
-              duration: 10,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-          />
-          <motion.div
-            className="absolute bottom-20 right-20 w-72 h-72 bg-green-300 rounded-full opacity-20 blur-3xl"
-            animate={{
-              y: [0, 50, 0],
-              x: [0, -40, 0],
-              scale: [1, 0.9, 1],
-            }}
-            transition={{
-              duration: 12,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: 1,
-            }}
-          />
-          <motion.div
-            className="absolute top-1/2 right-1/4 w-56 h-56 bg-orange-300 rounded-full opacity-20 blur-3xl"
-            animate={{
-              y: [0, -50, 0],
-              x: [0, 35, 0],
-              scale: [1, 1.1, 1],
-            }}
-            transition={{
-              duration: 14,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: 2,
-            }}
-          />
-        </div>
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <section className="py-20 bg-beige-50 text-[#4a361f]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle
             title="Client Testimonials"
             subtitle="What They Say"
             description="Hear from our satisfied clients about their experience with our mehndi artistry."
+            className="text-[#4a361f]"
           />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
@@ -339,18 +295,17 @@ export default function Portfolio() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ y: -8, scale: 1.02 }}
-                className={`${getColorfulGradient(index)} rounded-2xl p-8 text-center border-2 border-white/50 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300`}
+                className="bg-white rounded-2xl p-6 text-center shadow-sm"
               >
-                <div className="flex justify-center space-x-1 mb-6">
+                <div className="flex justify-center space-x-1 mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <span key={i} className="text-yellow-500 text-2xl">★</span>
+                    <span key={i} className="text-[#4a361f]">★</span>
                   ))}
                 </div>
-                <p className="text-gray-800 mb-6 italic text-lg leading-relaxed">
+                <p className="text-[#4a361f] mb-4 italic">
                   &ldquo;{testimonial.text}&rdquo;
                 </p>
-                <h4 className="font-serif font-bold text-gray-900 text-xl">
+                <h4 className="font-semibold text-[#4a361f]">
                   {testimonial.name}
                 </h4>
               </motion.div>
