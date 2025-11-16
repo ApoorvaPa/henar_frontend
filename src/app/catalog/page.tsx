@@ -5,13 +5,14 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import SectionTitle from '@/components/SectionTitle';
 import { products } from '@/data/sampleData';
-import { ShoppingCart, Star, Heart, Filter, Search, Sparkles } from 'lucide-react';
+import { ShoppingCart, Star, Heart, Filter, Search, Sparkles, X } from 'lucide-react';
 
 export default function Catalog() {
   const [selectedMasterCategory, setSelectedMasterCategory] = useState<string>('all');
   const [selectedSubCategory, setSelectedSubCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [favorites, setFavorites] = useState<string[]>([]);
+  const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
 
   const masterCategories = [
     { id: 'all', name: 'All Categories' },
@@ -57,6 +58,23 @@ export default function Catalog() {
   useEffect(() => {
     setSelectedSubCategory('all');
   }, [selectedMasterCategory]);
+
+  // Close modal on ESC key
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setSelectedImage(null);
+      }
+    };
+    if (selectedImage) {
+      document.addEventListener('keydown', handleEscape);
+      document.body.style.overflow = 'hidden';
+    }
+    return () => {
+      document.removeEventListener('keydown', handleEscape);
+      document.body.style.overflow = 'unset';
+    };
+  }, [selectedImage]);
 
   return (
     <div className="min-h-screen bg-beige-50">
@@ -118,7 +136,10 @@ export default function Catalog() {
                   </div>
 
                   {/* Image */}
-                  <div className="relative h-64 overflow-hidden bg-gradient-to-br from-beige-100 to-sage-50">
+                  <div 
+                    className="relative h-64 overflow-hidden bg-gradient-to-br from-beige-100 to-sage-50 cursor-pointer"
+                    onClick={() => setSelectedImage({ src: product.image, alt: product.name })}
+                  >
                     <Image
                       src={product.image}
                       alt={product.name}
@@ -142,7 +163,10 @@ export default function Catalog() {
                         {product.name}
                       </h3>
                       <button
-                        onClick={() => toggleFavorite(product.id)}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          toggleFavorite(product.id);
+                        }}
                         className="p-2 hover:bg-beige-100 rounded-full transition-colors"
                       >
                         <Heart 
@@ -271,7 +295,10 @@ export default function Catalog() {
                 className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 group"
               >
                 {/* Image */}
-                <div className="relative h-52 overflow-hidden bg-gradient-to-br from-beige-100 to-sage-50">
+                <div 
+                  className="relative h-52 overflow-hidden bg-gradient-to-br from-beige-100 to-sage-50 cursor-pointer"
+                  onClick={() => setSelectedImage({ src: product.image, alt: product.name })}
+                >
                   <Image
                     src={product.image}
                     alt={product.name}
@@ -295,8 +322,11 @@ export default function Catalog() {
                     </div>
                   )}
                   <button
-                    onClick={() => toggleFavorite(product.id)}
-                    className="absolute top-3 right-3 p-2 bg-white/90 backdrop-blur-sm rounded-full hover:bg-white transition-colors"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      toggleFavorite(product.id);
+                    }}
+                    className="absolute top-3 right-3 p-2 bg-white/90 backdrop-blur-sm rounded-full hover:bg-white transition-colors z-10"
                   >
                     <Heart 
                       size={16} 
@@ -389,6 +419,52 @@ export default function Catalog() {
           </motion.div>
         </div>
       </section>
+
+      {/* Image Modal */}
+      {selectedImage && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm"
+          onClick={() => setSelectedImage(null)}
+        >
+          <motion.div
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.8, opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="relative max-w-7xl max-h-[90vh] mx-4"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close Button */}
+            <button
+              onClick={() => setSelectedImage(null)}
+              className="absolute -top-12 right-0 text-white hover:text-gold-400 transition-colors z-10"
+              aria-label="Close modal"
+            >
+              <X size={32} className="bg-black/50 rounded-full p-1" />
+            </button>
+
+            {/* Zoomed Image */}
+            <div className="relative w-full h-full bg-white rounded-lg overflow-hidden shadow-2xl">
+              <Image
+                src={selectedImage.src}
+                alt={selectedImage.alt}
+                width={1200}
+                height={900}
+                className="w-full h-auto max-h-[90vh] object-contain"
+                priority
+              />
+            </div>
+
+            {/* Image Title */}
+            <p className="text-white text-center mt-4 text-lg font-semibold">
+              {selectedImage.alt}
+            </p>
+          </motion.div>
+        </motion.div>
+      )}
     </div>
   );
 }
