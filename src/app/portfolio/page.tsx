@@ -1,43 +1,131 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useMemo, useState } from 'react';
-import Image from 'next/image';
 import SectionTitle from '@/components/SectionTitle';
 import Gallery from '@/components/Gallery';
-import { portfolioItems, products } from '@/data/sampleData';
+import { portfolioItems } from '@/data/sampleData';
 
 export default function Portfolio() {
-  // Active tab state for category chips
-  const [activeMaster, setActiveMaster] = useState<string | null>(null);
-  const [activeSub, setActiveSub] = useState<string | null>(null);
+  // Colorful gradient function (same as booking page)
+  const getColorfulGradient = (index: number) => {
+    const gradients = [
+      'bg-gradient-to-br from-pink-200 via-pink-100 to-rose-200',
+      'bg-gradient-to-br from-blue-200 via-blue-100 to-cyan-200',
+      'bg-gradient-to-br from-yellow-200 via-yellow-100 to-amber-200',
+      'bg-gradient-to-br from-green-200 via-green-100 to-emerald-200',
+      'bg-gradient-to-br from-purple-200 via-purple-100 to-violet-200',
+      'bg-gradient-to-br from-orange-200 via-orange-100 to-red-200',
+      'bg-gradient-to-br from-teal-200 via-teal-100 to-cyan-200',
+      'bg-gradient-to-br from-indigo-200 via-indigo-100 to-blue-200',
+    ];
+    return gradients[index % gradients.length];
+  };
 
-  // Build master → subcategory cards from products
-  const cards = useMemo(() => {
-    const masterToSubs: Record<string, string[]> = {};
-    products.forEach(p => {
-      const key = p.masterCategory.toUpperCase();
-      masterToSubs[key] = masterToSubs[key] || [];
-      if (p.subCategory && !masterToSubs[key].includes(p.subCategory)) {
-        masterToSubs[key].push(p.subCategory);
-      }
-    });
-
-    const orderedMasters = ['BRIDAL', 'PARTY', 'FESTIVAL', 'HOBBY'];
-    return orderedMasters.map(master => ({
-      title: master,
-      image:
-        master === 'BRIDAL' ? '/images/categories/bridal.jpg' :
-        master === 'PARTY' ? '/images/categories/party.jpg' :
-        master === 'FESTIVAL' ? '/images/categories/Festival.jpg' :
-        '/images/categories/Hobby.jpg',
-      subcategories: masterToSubs[master] || []
-    }));
-  }, []);
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-r from-maroon-600 to-maroon-800 text-black overflow-hidden">
+        {/* Colorful Animated Background Elements */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <motion.div
+            className="absolute top-10 left-10 w-64 h-64 bg-pink-400 rounded-full opacity-30 blur-3xl"
+            animate={{
+              y: [0, -50, 0],
+              x: [0, 40, 0],
+              scale: [1, 1.3, 1],
+            }}
+            transition={{
+              duration: 10,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+          <motion.div
+            className="absolute top-20 right-20 w-72 h-72 bg-blue-400 rounded-full opacity-30 blur-3xl"
+            animate={{
+              y: [0, 60, 0],
+              x: [0, -50, 0],
+              scale: [1, 0.9, 1],
+            }}
+            transition={{
+              duration: 12,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 1,
+            }}
+          />
+          <motion.div
+            className="absolute bottom-20 left-1/3 w-64 h-64 bg-yellow-400 rounded-full opacity-30 blur-3xl"
+            animate={{
+              y: [0, -70, 0],
+              x: [0, 50, 0],
+              scale: [1, 1.4, 1],
+            }}
+            transition={{
+              duration: 14,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 2,
+            }}
+          />
+          <motion.div
+            className="absolute bottom-10 right-1/4 w-60 h-60 bg-green-400 rounded-full opacity-30 blur-3xl"
+            animate={{
+              y: [0, 50, 0],
+              x: [0, -40, 0],
+              scale: [1, 1.2, 1],
+            }}
+            transition={{
+              duration: 11,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 0.5,
+            }}
+          />
+          <motion.div
+            className="absolute top-1/2 left-1/2 w-56 h-56 bg-purple-400 rounded-full opacity-30 blur-3xl"
+            animate={{
+              y: [0, -50, 0],
+              x: [0, 35, 0],
+              scale: [1, 1.2, 1],
+            }}
+            transition={{
+              duration: 13,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 1.5,
+            }}
+          />
+          <motion.div
+            className="absolute top-1/3 right-1/4 w-48 h-48 bg-orange-400 rounded-full opacity-30 blur-3xl"
+            animate={{
+              y: [0, 45, 0],
+              x: [0, -25, 0],
+              scale: [1, 1.15, 1],
+            }}
+            transition={{
+              duration: 15,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 0.8,
+            }}
+          />
+          <motion.div
+            className="absolute bottom-1/3 left-1/4 w-52 h-52 bg-cyan-400 rounded-full opacity-30 blur-3xl"
+            animate={{
+              y: [0, -60, 0],
+              x: [0, 30, 0],
+              scale: [1, 1.25, 1],
+            }}
+            transition={{
+              duration: 16,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 2.5,
+            }}
+          />
+        </div>
+        
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-32 h-32 border border-gold-400/20 rounded-full"></div>
           <div className="absolute bottom-20 right-10 w-24 h-24 border border-beige-400/20 rounded-full"></div>
@@ -50,10 +138,10 @@ export default function Portfolio() {
             transition={{ duration: 0.8 }}
             className="space-y-6"
           >
-            <h1 className="text-4xl md:text-6xl font-serif font-bold">
+            <h1 className="text-4xl md:text-6xl font-serif font-bold drop-shadow-lg">
               Our Portfolio
             </h1>
-            <p className="text-xl md:text-2xl text-beige-200 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-beige-200 max-w-3xl mx-auto drop-shadow-lg">
               Explore our collection of stunning mehndi designs, each crafted with precision and artistic excellence.
             </p>
           </motion.div>
@@ -73,95 +161,55 @@ export default function Portfolio() {
           <Gallery items={portfolioItems} />
         </div>
       </section>
-{/* Categories Section - Consistent with Catalog (Master + Subcategories) */}
-<section className="py-20 bg-beige-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionTitle
-            title="Browse by Category"
-            subtitle="Master & Subcategories"
-            description="Explore designs by master categories and their subcategories, just like in the catalog."
-            className="text-black"
-          />
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
-            {cards.map((card, index) => (
-              <motion.button
-                key={card.title}
-                type="button"
-                onClick={() => { setActiveMaster(card.title); setActiveSub(null); }}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                whileHover={{ y: -8, scale: 1.02 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-maroon-600 focus:outline-none focus-visible:ring-4 focus-visible:ring-maroon-300 text-left w-full"
-              >
-                <div className="relative h-48 overflow-hidden">
-                  <Image
-                    src={card.image}
-                    alt={card.title}
-                    width={400}
-                    height={200}
-                    className="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 group-hover:brightness-75"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent group-hover:from-maroon-900/80 group-hover:via-maroon-600/30 transition-all duration-300" />
-                  
-                  {/* Decorative corner accent */}
-                  <div className="absolute top-0 right-0 w-16 h-16 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="absolute top-2 right-2 w-12 h-12 border-t-2 border-r-2 border-gold-400"></div>
-                  </div>
-                  
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <h3 className="text-white font-serif font-bold text-2xl mb-1 tracking-wide transform transition-transform duration-300 group-hover:translate-x-1">
-                      {card.title}
-                    </h3>
-                    <div className="h-0.5 w-0 bg-gold-400 transition-all duration-300 group-hover:w-16"></div>
-                  </div>
-                  
-                  {/* Category badge */}
-                  <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 transform -translate-y-2 group-hover:translate-y-0">
-                    <span className="text-maroon-900 text-xs font-bold uppercase tracking-wider">View Category</span>
-                  </div>
-                </div>
-
-                {/* Subcategory chips */}
-                <div className="p-5 bg-gradient-to-b from-white to-beige-50 group-hover:from-beige-50 group-hover:to-white transition-all duration-300">
-                  {card.subcategories.length > 0 ? (
-                    <div className="flex flex-wrap gap-2">
-                      {card.subcategories.map((sub) => {
-                        const isActive = activeMaster === card.title && activeSub === sub;
-                        return (
-                          <button
-                            key={sub}
-                            type="button"
-                            onClick={(e) => { 
-                              e.stopPropagation();
-                              setActiveMaster(card.title); 
-                              setActiveSub(sub); 
-                            }}
-                            aria-pressed={isActive}
-                            className={`${isActive
-                              ? 'bg-maroon-700 text-white border-maroon-700 shadow-md scale-105'
-                              : 'bg-gold-100 text-maroon-900 border-gold-300 hover:bg-maroon-600 hover:text-white hover:border-maroon-600 hover:shadow-md'
-                            } px-4 py-2 rounded-full text-xs font-semibold border-2 transition-all duration-200 transform hover:scale-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-maroon-400`}
-                          >
-                            {sub}
-                          </button>
-                        );
-                      })}
-                    </div>
-                  ) : (
-                    <p className="text-sage-600 text-sm italic">No subcategories yet</p>
-                  )}
-                </div>
-              </motion.button>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-beige-50 relative overflow-hidden">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <motion.div
+            className="absolute top-10 right-10 w-64 h-64 bg-pink-300 rounded-full opacity-20 blur-3xl"
+            animate={{
+              y: [0, -30, 0],
+              x: [0, 20, 0],
+              scale: [1, 1.2, 1],
+            }}
+            transition={{
+              duration: 10,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+          <motion.div
+            className="absolute bottom-10 left-10 w-72 h-72 bg-blue-300 rounded-full opacity-20 blur-3xl"
+            animate={{
+              y: [0, 40, 0],
+              x: [0, -30, 0],
+              scale: [1, 0.9, 1],
+            }}
+            transition={{
+              duration: 12,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 1,
+            }}
+          />
+          <motion.div
+            className="absolute top-1/2 left-1/2 w-56 h-56 bg-purple-300 rounded-full opacity-20 blur-3xl"
+            animate={{
+              y: [0, -40, 0],
+              x: [0, 25, 0],
+              scale: [1, 1.1, 1],
+            }}
+            transition={{
+              duration: 14,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 2,
+            }}
+          />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <SectionTitle
             title="Our Creative Process"
             subtitle="How We Work"
@@ -196,15 +244,16 @@ export default function Portfolio() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center"
+                whileHover={{ y: -8, scale: 1.03 }}
+                className={`${getColorfulGradient(index)} rounded-2xl p-8 text-center border-2 border-white/50 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300`}
               >
-                <div className="w-16 h-16 bg-maroon-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-white font-bold text-lg">{process.step}</span>
+                <div className="w-20 h-20 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-6 shadow-md">
+                  <span className="text-gray-800 font-bold text-xl">{process.step}</span>
                 </div>
-                <h3 className="text-xl font-serif font-bold text-sage-900 mb-4">
+                <h3 className="text-xl font-serif font-bold text-gray-800 mb-4">
                   {process.title}
                 </h3>
-                <p className="text-sage-600 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed">
                   {process.description}
                 </p>
               </motion.div>
@@ -214,13 +263,57 @@ export default function Portfolio() {
       </section>
 
       {/* Testimonials Preview (Stats Section) */}
-      <section className="py-20 bg-beige-50 text-[#4a361f]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-white relative overflow-hidden">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <motion.div
+            className="absolute top-20 left-20 w-64 h-64 bg-yellow-300 rounded-full opacity-20 blur-3xl"
+            animate={{
+              y: [0, -40, 0],
+              x: [0, 30, 0],
+              scale: [1, 1.2, 1],
+            }}
+            transition={{
+              duration: 10,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+          <motion.div
+            className="absolute bottom-20 right-20 w-72 h-72 bg-green-300 rounded-full opacity-20 blur-3xl"
+            animate={{
+              y: [0, 50, 0],
+              x: [0, -40, 0],
+              scale: [1, 0.9, 1],
+            }}
+            transition={{
+              duration: 12,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 1,
+            }}
+          />
+          <motion.div
+            className="absolute top-1/2 right-1/4 w-56 h-56 bg-orange-300 rounded-full opacity-20 blur-3xl"
+            animate={{
+              y: [0, -50, 0],
+              x: [0, 35, 0],
+              scale: [1, 1.1, 1],
+            }}
+            transition={{
+              duration: 14,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 2,
+            }}
+          />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <SectionTitle
             title="Client Testimonials"
             subtitle="What They Say"
             description="Hear from our satisfied clients about their experience with our mehndi artistry."
-            className="text-[#4a361f]"
           />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
@@ -246,17 +339,18 @@ export default function Portfolio() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white rounded-2xl p-6 text-center shadow-sm"
+                whileHover={{ y: -8, scale: 1.02 }}
+                className={`${getColorfulGradient(index)} rounded-2xl p-8 text-center border-2 border-white/50 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300`}
               >
-                <div className="flex justify-center space-x-1 mb-4">
+                <div className="flex justify-center space-x-1 mb-6">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <span key={i} className="text-[#4a361f]">★</span>
+                    <span key={i} className="text-yellow-500 text-2xl">★</span>
                   ))}
                 </div>
-                <p className="text-[#4a361f] mb-4 italic">
+                <p className="text-gray-800 mb-6 italic text-lg leading-relaxed">
                   &ldquo;{testimonial.text}&rdquo;
                 </p>
-                <h4 className="font-semibold text-[#4a361f]">
+                <h4 className="font-serif font-bold text-gray-900 text-xl">
                   {testimonial.name}
                 </h4>
               </motion.div>

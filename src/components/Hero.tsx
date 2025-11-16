@@ -29,7 +29,7 @@ const Hero = ({
   secondaryButtonLink,
   backgroundImage = '/images/hero-bg.jpg',
   backgroundImages,
-  slideIntervalMs = 5500,
+  slideIntervalMs = 3000,
   showRating = false
 }: HeroProps) => {
   const slides = useMemo(() => {
@@ -65,7 +65,7 @@ const Hero = ({
     >
       {/* Background slideshow */}
       <div className="absolute inset-0">
-        <AnimatePresence mode="wait">
+        <AnimatePresence initial={false}>
           <motion.div
             key={slides[activeIndex]}
             className="absolute inset-0"
@@ -78,10 +78,13 @@ const Hero = ({
             initial={{ opacity: 0, scale: 1.04 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 1.02 }}
-            transition={{ duration: 1.0, ease: [0.22, 0.61, 0.36, 1] }}
+            transition={{ duration: 0.8, ease: [0.22, 0.61, 0.36, 1] }}
           />
         </AnimatePresence>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/40 to-black/55" />
+        {/* Colorful gradient overlays using theme colors */}
+        <div className="absolute inset-0 bg-gradient-to-br from-pink-600/30 via-purple-600/25 to-blue-600/30" />
+        <div className="absolute inset-0 bg-gradient-to-tl from-green-600/20 via-cyan-600/18 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/12" />
       </div>
       {/* Decorative elements */}
       <div className="absolute inset-0">

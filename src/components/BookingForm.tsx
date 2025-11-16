@@ -1,7 +1,8 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { Calendar, Clock, User, Mail, Phone, MessageSquare } from 'lucide-react';
 import { services } from '@/data/sampleData';
 
@@ -10,15 +11,56 @@ interface BookingFormProps {
 }
 
 const BookingForm = ({ preselectedService }: BookingFormProps) => {
+  const searchParams = useSearchParams();
+  const productParam = searchParams.get('product');
+  const serviceParam = searchParams.get('service');
+  
+  // Initialize with service from URL if available
+  const initialService = preselectedService || serviceParam || '';
+  const initialMessage = productParam ? decodeURIComponent(productParam) : '';
+  
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
-    service: preselectedService || '',
+    service: initialService,
     date: '',
     time: '',
-    message: ''
+    message: initialMessage
   });
+
+  // Update form when URL params change
+  useEffect(() => {
+    if (productParam) {
+      const decodedProduct = decodeURIComponent(productParam);
+      setFormData(prev => ({
+        ...prev,
+        message: decodedProduct
+      }));
+    }
+  }, [productParam]);
+
+  useEffect(() => {
+    if (serviceParam) {
+      setFormData(prev => ({
+        ...prev,
+        service: serviceParam
+      }));
+    }
+  }, [serviceParam]);
+
+  // Scroll to form when service is selected from URL
+  useEffect(() => {
+    if (serviceParam) {
+      // Small delay to ensure form is rendered
+      setTimeout(() => {
+        const formElement = document.getElementById('booking-form');
+        if (formElement) {
+          formElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+    }
+  }, [serviceParam]);
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -80,8 +122,12 @@ const BookingForm = ({ preselectedService }: BookingFormProps) => {
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
-        className="bg-white rounded-2xl shadow-lg p-8 text-center"
+        className="bg-gradient-to-br from-green-100 via-emerald-50 to-teal-100 rounded-2xl shadow-lg p-8 text-center border-2 border-white/50 backdrop-blur-sm relative overflow-hidden"
       >
+        {/* Decorative colorful elements */}
+        <div className="absolute top-0 right-0 w-32 h-32 bg-green-300 rounded-full opacity-20 blur-2xl -mr-16 -mt-16"></div>
+        <div className="absolute bottom-0 left-0 w-40 h-40 bg-teal-300 rounded-full opacity-20 blur-2xl -ml-20 -mb-20"></div>
+        <div className="relative z-10">
         <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
           <svg className="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -96,17 +142,32 @@ const BookingForm = ({ preselectedService }: BookingFormProps) => {
         <p className="text-sm text-sage-500">
           You can also reach us directly at +91 9318435436
         </p>
+        </div>
       </motion.div>
     );
   }
 
   return (
     <motion.div
-  initial={{ opacity: 0, y: 30 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.6 }}
-  className="bg-white rounded-2xl shadow-xl p-8"
->
+      id="booking-form"
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.4 }}
+      className="bg-gradient-to-br from-pink-100 via-purple-50 to-blue-100 rounded-2xl shadow-xl p-8 relative overflow-hidden"
+      style={{
+        border: '2px solid transparent',
+        backgroundImage: 'linear-gradient(white, white), linear-gradient(135deg, #ec4899, #a855f7, #3b82f6, #10b981)',
+        backgroundOrigin: 'border-box',
+        backgroundClip: 'padding-box, border-box',
+        boxShadow: '0 0 30px rgba(236, 72, 153, 0.3), 0 0 60px rgba(168, 85, 247, 0.2), 0 0 90px rgba(59, 130, 246, 0.1), 0 20px 40px rgba(0, 0, 0, 0.1)'
+      }}
+    >
+      {/* Decorative colorful elements */}
+      <div className="absolute top-0 right-0 w-32 h-32 bg-pink-300 rounded-full opacity-20 blur-2xl -mr-16 -mt-16"></div>
+      <div className="absolute bottom-0 left-0 w-40 h-40 bg-blue-300 rounded-full opacity-20 blur-2xl -ml-20 -mb-20"></div>
+      <div className="absolute top-1/2 right-1/4 w-24 h-24 bg-purple-300 rounded-full opacity-20 blur-2xl"></div>
+      
+      <div className="relative z-10">
   <div className="text-center mb-6">
     <h2 className="text-3xl font-serif font-bold text-sage-900 mb-2">
       Book Your Appointment
@@ -269,6 +330,7 @@ const BookingForm = ({ preselectedService }: BookingFormProps) => {
         <p className="text-sm text-sage-500">
           By submitting this form, you agree to our terms of service and privacy policy.
         </p>
+      </div>
       </div>
     </motion.div>
   );

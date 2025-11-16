@@ -7,26 +7,114 @@ import { testimonials } from '@/data/sampleData';
 import { Star, Quote } from 'lucide-react';
 
 export default function Testimonials() {
+  // Colorful gradient function
+  const getColorfulGradient = (index: number) => {
+    const gradients = [
+      'bg-gradient-to-br from-pink-200 via-pink-100 to-rose-200',
+      'bg-gradient-to-br from-blue-200 via-blue-100 to-cyan-200',
+      'bg-gradient-to-br from-yellow-200 via-yellow-100 to-amber-200',
+      'bg-gradient-to-br from-green-200 via-green-100 to-emerald-200',
+      'bg-gradient-to-br from-purple-200 via-purple-100 to-violet-200',
+      'bg-gradient-to-br from-orange-200 via-orange-100 to-red-200',
+      'bg-gradient-to-br from-teal-200 via-teal-100 to-cyan-200',
+      'bg-gradient-to-br from-indigo-200 via-indigo-100 to-blue-200',
+    ];
+    return gradients[index % gradients.length];
+  };
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-r from-maroon-600 to-maroon-800 text-white overflow-hidden">
+        {/* Colorful Animated Background Elements */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <motion.div
+            className="absolute top-10 left-10 w-64 h-64 bg-pink-400 rounded-full opacity-30 blur-3xl"
+            animate={{
+              y: [0, -50, 0],
+              x: [0, 40, 0],
+              scale: [1, 1.3, 1],
+            }}
+            transition={{
+              duration: 10,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+          <motion.div
+            className="absolute top-20 right-20 w-72 h-72 bg-blue-400 rounded-full opacity-30 blur-3xl"
+            animate={{
+              y: [0, 60, 0],
+              x: [0, -50, 0],
+              scale: [1, 0.9, 1],
+            }}
+            transition={{
+              duration: 12,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 1,
+            }}
+          />
+          <motion.div
+            className="absolute bottom-20 left-1/3 w-64 h-64 bg-yellow-400 rounded-full opacity-30 blur-3xl"
+            animate={{
+              y: [0, -70, 0],
+              x: [0, 50, 0],
+              scale: [1, 1.4, 1],
+            }}
+            transition={{
+              duration: 14,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 2,
+            }}
+          />
+          <motion.div
+            className="absolute bottom-10 right-1/4 w-60 h-60 bg-green-400 rounded-full opacity-30 blur-3xl"
+            animate={{
+              y: [0, 50, 0],
+              x: [0, -40, 0],
+              scale: [1, 1.2, 1],
+            }}
+            transition={{
+              duration: 11,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 0.5,
+            }}
+          />
+          <motion.div
+            className="absolute top-1/2 left-1/2 w-56 h-56 bg-purple-400 rounded-full opacity-30 blur-3xl"
+            animate={{
+              y: [0, -50, 0],
+              x: [0, 35, 0],
+              scale: [1, 1.2, 1],
+            }}
+            transition={{
+              duration: 13,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 1.5,
+            }}
+          />
+        </div>
+        
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-32 h-32 border border-gold-400/20 rounded-full"></div>
           <div className="absolute bottom-20 right-10 w-24 h-24 border border-beige-400/20 rounded-full"></div>
         </div>
         
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-black">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="space-y-6"
           >
-            <h1 className="text-4xl md:text-6xl font-serif font-bold">
+            <h1 className="text-4xl md:text-6xl font-serif font-bold text-amber-900 drop-shadow-lg">
               Client Testimonials
             </h1>
-            <p className="text-xl md:text-2xl text-darkbrown text-black-200 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-amber-900 max-w-3xl mx-auto drop-shadow-lg">
               Hear from our satisfied clients about their experience with our mehndi artistry.
             </p>
           </motion.div>
@@ -34,55 +122,96 @@ export default function Testimonials() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-beige-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center text-black">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="space-y-4"
-            >
-              <div className="text-4xl font-serif font-bold text-maroon-600">4.9</div>
-              <p className="text-sage-600 text-lg">Average Rating</p>
-            </motion.div>
+      <section className="py-20 bg-white relative overflow-hidden">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <motion.div
+            className="absolute top-20 left-20 w-64 h-64 bg-pink-300 rounded-full opacity-20 blur-3xl"
+            animate={{
+              y: [0, -40, 0],
+              x: [0, 30, 0],
+              scale: [1, 1.2, 1],
+            }}
+            transition={{
+              duration: 10,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+          <motion.div
+            className="absolute bottom-20 right-20 w-72 h-72 bg-blue-300 rounded-full opacity-20 blur-3xl"
+            animate={{
+              y: [0, 50, 0],
+              x: [0, -40, 0],
+              scale: [1, 0.9, 1],
+            }}
+            transition={{
+              duration: 12,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 1,
+            }}
+          />
+        </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="space-y-4"
-            >
-              <div className="text-4xl font-serif font-bold text-maroon-600">5000+</div>
-              <p className="text-sage-600 text-lg">Reviews</p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="space-y-4"
-            >
-              <div className="text-4xl font-serif font-bold text-maroon-600">500+</div>
-              <p className="text-sage-600 text-lg">Happy Clients</p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="space-y-4"
-            >
-              <div className="text-4xl font-serif font-bold text-maroon-600">98%</div>
-              <p className="text-sage-600 text-lg">Satisfaction Rate</p>
-            </motion.div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+            {[
+              { value: "4.9", label: "Average Rating" },
+              { value: "5000+", label: "Reviews" },
+              { value: "500+", label: "Happy Clients" },
+              { value: "98%", label: "Satisfaction Rate" }
+            ].map((stat, index) => (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                whileHover={{ y: -5, scale: 1.05 }}
+                className={`${getColorfulGradient(index)} rounded-2xl p-8 border-2 border-white/50 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300`}
+              >
+                <div className="text-4xl font-serif font-bold text-gray-800 mb-2">{stat.value}</div>
+                <p className="text-gray-700 text-lg font-medium">{stat.label}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* All Testimonials */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-beige-50 relative overflow-hidden">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <motion.div
+            className="absolute top-10 right-10 w-64 h-64 bg-yellow-300 rounded-full opacity-20 blur-3xl"
+            animate={{
+              y: [0, -30, 0],
+              x: [0, 20, 0],
+              scale: [1, 1.2, 1],
+            }}
+            transition={{
+              duration: 10,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+          <motion.div
+            className="absolute bottom-10 left-10 w-72 h-72 bg-green-300 rounded-full opacity-20 blur-3xl"
+            animate={{
+              y: [0, 40, 0],
+              x: [0, -30, 0],
+              scale: [1, 0.9, 1],
+            }}
+            transition={{
+              duration: 12,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 1,
+            }}
+          />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <SectionTitle
             title="What Our Clients Say"
             subtitle="Real Reviews"
@@ -98,13 +227,43 @@ export default function Testimonials() {
       </section>
 
       {/* Featured Testimonials */}
-      <section className="py-20 bg-sage-900 text-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-white relative overflow-hidden">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <motion.div
+            className="absolute top-20 left-20 w-64 h-64 bg-purple-300 rounded-full opacity-20 blur-3xl"
+            animate={{
+              y: [0, -40, 0],
+              x: [0, 30, 0],
+              scale: [1, 1.2, 1],
+            }}
+            transition={{
+              duration: 10,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+          <motion.div
+            className="absolute bottom-20 right-20 w-72 h-72 bg-cyan-300 rounded-full opacity-20 blur-3xl"
+            animate={{
+              y: [0, 50, 0],
+              x: [0, -40, 0],
+              scale: [1, 0.9, 1],
+            }}
+            transition={{
+              duration: 12,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 1,
+            }}
+          />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <SectionTitle
             title="Featured Reviews"
             subtitle="Standout Experiences"
             description="Some of our most memorable client experiences and feedback."
-            className="text-black"
           />
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12">
@@ -127,26 +286,27 @@ export default function Testimonials() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white/10 backdrop-blur-sm rounded-2xl p-8"
+                whileHover={{ y: -8, scale: 1.02 }}
+                className={`${getColorfulGradient(index)} rounded-2xl p-8 border-2 border-white/50 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300`}
               >
                 <div className="flex items-center space-x-1 mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} size={20} className="text-gold-400 fill-current" />
+                    <Star key={i} size={20} className="text-yellow-500 fill-current" />
                   ))}
                 </div>
-                <div className="text-6xl text-gold-400/20 mb-4">
+                <div className="text-6xl text-gray-300 mb-4">
                   <Quote />
                 </div>
-                <p className="text-beige-200 mb-6 leading-relaxed italic">
+                <p className="text-gray-800 mb-6 leading-relaxed italic text-lg">
                   &ldquo;{testimonial.text}&rdquo;
                 </p>
                 <div className="flex items-center justify-between">
                   <div>
-                    <h4 className="font-semibold text-gold-400 text-lg">
+                    <h4 className="font-serif font-bold text-gray-900 text-lg">
                       {testimonial.name}
                     </h4>
                   </div>
-                  <span className="bg-gold-500 text-sage-900 px-4 py-2 rounded-full text-sm font-semibold">
+                  <span className="bg-white/90 backdrop-blur-sm text-gray-800 px-4 py-2 rounded-full text-sm font-semibold shadow-md">
                     {testimonial.service}
                   </span>
                 </div>
@@ -157,8 +317,39 @@ export default function Testimonials() {
       </section>
 
       {/* Service Categories */}
-      <section className="py-20 bg-beige-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-beige-50 relative overflow-hidden">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <motion.div
+            className="absolute top-10 left-10 w-64 h-64 bg-orange-300 rounded-full opacity-20 blur-3xl"
+            animate={{
+              y: [0, -30, 0],
+              x: [0, 20, 0],
+              scale: [1, 1.2, 1],
+            }}
+            transition={{
+              duration: 10,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+          <motion.div
+            className="absolute bottom-10 right-10 w-72 h-72 bg-teal-300 rounded-full opacity-20 blur-3xl"
+            animate={{
+              y: [0, 40, 0],
+              x: [0, -30, 0],
+              scale: [1, 0.9, 1],
+            }}
+            transition={{
+              duration: 12,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 1,
+            }}
+          />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <SectionTitle
             title="Reviews by Service"
             subtitle="Service-Specific Feedback"
@@ -197,9 +388,10 @@ export default function Testimonials() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow duration-300"
+                whileHover={{ y: -5, scale: 1.02 }}
+                className={`${getColorfulGradient(index)} rounded-2xl p-6 text-center border-2 border-white/50 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300`}
               >
-                <h3 className="text-lg font-serif font-bold text-sage-900 mb-2">
+                <h3 className="text-lg font-serif font-bold text-gray-800 mb-2">
                   {service.service}
                 </h3>
                 <div className="flex items-center justify-center space-x-1 mb-2">
@@ -207,15 +399,15 @@ export default function Testimonials() {
                     <Star 
                       key={i} 
                       size={16} 
-                      className={i < Math.floor(service.rating) ? "text-gold-400 fill-current" : "text-sage-300"} 
+                      className={i < Math.floor(service.rating) ? "text-yellow-500 fill-current" : "text-gray-300"} 
                     />
                   ))}
-                  <span className="text-sage-600 text-sm ml-2">{service.rating}</span>
+                  <span className="text-gray-700 text-sm ml-2 font-semibold">{service.rating}</span>
                 </div>
-                <p className="text-sage-600 text-sm mb-4">
+                <p className="text-gray-700 text-sm mb-4 font-medium">
                   {service.count}
                 </p>
-                <p className="text-maroon-600 font-medium text-sm">
+                <p className="text-gray-800 font-semibold text-sm">
                   {service.highlight}
                 </p>
               </motion.div>
@@ -225,33 +417,110 @@ export default function Testimonials() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-maroon-600 to-maroon-800 text-black">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="py-20 bg-gradient-to-r from-maroon-600 to-maroon-800 text-white relative overflow-hidden">
+        {/* Colorful Animated Background Elements */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <motion.div
+            className="absolute top-10 left-10 w-64 h-64 bg-pink-400 rounded-full opacity-30 blur-3xl"
+            animate={{
+              y: [0, -50, 0],
+              x: [0, 40, 0],
+              scale: [1, 1.3, 1],
+            }}
+            transition={{
+              duration: 10,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+          <motion.div
+            className="absolute top-20 right-20 w-72 h-72 bg-blue-400 rounded-full opacity-30 blur-3xl"
+            animate={{
+              y: [0, 60, 0],
+              x: [0, -50, 0],
+              scale: [1, 0.9, 1],
+            }}
+            transition={{
+              duration: 12,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 1,
+            }}
+          />
+          <motion.div
+            className="absolute bottom-20 left-1/3 w-64 h-64 bg-yellow-400 rounded-full opacity-30 blur-3xl"
+            animate={{
+              y: [0, -70, 0],
+              x: [0, 50, 0],
+              scale: [1, 1.4, 1],
+            }}
+            transition={{
+              duration: 14,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 2,
+            }}
+          />
+          <motion.div
+            className="absolute bottom-10 right-1/4 w-60 h-60 bg-green-400 rounded-full opacity-30 blur-3xl"
+            animate={{
+              y: [0, 50, 0],
+              x: [0, -40, 0],
+              scale: [1, 1.2, 1],
+            }}
+            transition={{
+              duration: 11,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 0.5,
+            }}
+          />
+          <motion.div
+            className="absolute top-1/2 left-1/2 w-56 h-56 bg-purple-400 rounded-full opacity-30 blur-3xl"
+            animate={{
+              y: [0, -50, 0],
+              x: [0, 35, 0],
+              scale: [1, 1.2, 1],
+            }}
+            transition={{
+              duration: 13,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 1.5,
+            }}
+          />
+        </div>
+        
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="space-y-6"
           >
-            <h2 className="text-4xl md:text-5xl font-serif font-bold">
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-amber-900 drop-shadow-lg">
               Ready to Join Our Happy Clients?
             </h2>
-            <p className="text-xl text-beige-200 max-w-2xl mx-auto">
+            <p className="text-xl text-amber-900 max-w-2xl mx-auto drop-shadow-lg">
               Book your appointment today and experience the artistry that our clients rave about.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-              <a
+              <motion.a
                 href="/booking"
-                className="border-2 border-darkbrown bg-gold-500 hover:bg-gold-400 text-sage-900 px-8 py-4 rounded-full font-semibold text-lg transition-colors duration-200"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 Book Your Appointment
-              </a>
-              <a
+              </motion.a>
+              <motion.a
                 href="/portfolio"
-                className="border-2 border-darkbrown text-black hover:bg-white hover:text-sage-900 px-8 py-4 rounded-full font-semibold text-lg transition-colors duration-200"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 View Our Work
-              </a>
+              </motion.a>
             </div>
           </motion.div>
         </div>

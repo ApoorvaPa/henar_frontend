@@ -15,7 +15,7 @@ export default function Home() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <Hero
-        title="Beautiful Mehndi Designs"
+        title="Henar Mehndi Artists"
         subtitle="Traditional Artistry"
         description="Transform your special moments with exquisite henna artistry. From bridal elegance to festive celebrations, we create stunning designs that tell your story."
         primaryButtonText="Book Appointment"
@@ -75,10 +75,10 @@ export default function Home() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-maroon-600 hover:bg-maroon-700 text-black px-8 py-4 rounded-full font-semibold text-lg transition-colors duration-200 flex items-center space-x-2 mx-auto"
+                className="bg-gradient-to-r from-purple-500 to-violet-500 hover:from-purple-600 hover:to-violet-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-200 flex items-center space-x-2 mx-auto shadow-lg"
               >
-                <span className="text-black">View All Services</span>
-                <ArrowRight size={20} className="text-black" />
+                <span>View All Services</span>
+                <ArrowRight size={20} />
               </motion.button>
             </Link>
           </div>
@@ -102,7 +102,7 @@ export default function Home() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-gold-500 hover:bg-gold-400 text-sage-900 px-8 py-4 rounded-full font-semibold text-lg transition-colors duration-200 flex items-center space-x-2"
+                  className="bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-200 flex items-center space-x-2 shadow-lg"
                 >
                   <span>View Full Portfolio</span>
                   <ArrowRight size={20} />
@@ -112,9 +112,9 @@ export default function Home() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="border-2 border-gold-500 hover:bg-gold-500 text-sage-900 px-8 py-4 rounded-full font-semibold text-lg transition-colors duration-200 flex items-center space-x-2"
+                  className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-200 flex items-center space-x-2 shadow-lg"
                 >
-                  <span>Browse Products</span>
+                  <span>View Full Catalog</span>
                   <ArrowRight size={20} />
                 </motion.button>
               </Link>
@@ -124,8 +124,67 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-sage-900 text-darkbrown">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-sage-900 text-darkbrown relative overflow-hidden">
+        {/* Colorful Background Elements */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <motion.div
+            className="absolute top-10 left-10 w-64 h-64 bg-pink-400 rounded-full opacity-25 blur-3xl"
+            animate={{
+              y: [0, -50, 0],
+              x: [0, 40, 0],
+              scale: [1, 1.3, 1],
+            }}
+            transition={{
+              duration: 10,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+          <motion.div
+            className="absolute top-20 right-20 w-72 h-72 bg-blue-400 rounded-full opacity-25 blur-3xl"
+            animate={{
+              y: [0, 60, 0],
+              x: [0, -50, 0],
+              scale: [1, 0.9, 1],
+            }}
+            transition={{
+              duration: 12,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 1,
+            }}
+          />
+          <motion.div
+            className="absolute bottom-20 left-1/3 w-64 h-64 bg-yellow-400 rounded-full opacity-25 blur-3xl"
+            animate={{
+              y: [0, -70, 0],
+              x: [0, 50, 0],
+              scale: [1, 1.4, 1],
+            }}
+            transition={{
+              duration: 14,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 2,
+            }}
+          />
+          <motion.div
+            className="absolute bottom-10 right-1/4 w-60 h-60 bg-green-400 rounded-full opacity-25 blur-3xl"
+            animate={{
+              y: [0, 50, 0],
+              x: [0, -40, 0],
+              scale: [1, 1.2, 1],
+            }}
+            transition={{
+              duration: 11,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 0.5,
+            }}
+          />
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -133,7 +192,7 @@ export default function Home() {
               transition={{ duration: 0.6 }}
               className="space-y-4"
             >
-              <div className="w-16 h-16 bg-gold-500 rounded-full flex items-center justify-center mx-auto">
+              <div className="w-16 h-16 bg-gold-500 rounded-full flex items-center justify-center mx-auto shadow-lg">
                 <Users size={32} className="text-sage-900" />
               </div>
               <h3 className="text-4xl font-serif font-bold text-gold-400">500+</h3>
@@ -146,7 +205,7 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="space-y-4"
             >
-              <div className="w-16 h-16 bg-gold-500 rounded-full flex items-center justify-center mx-auto">
+              <div className="w-16 h-16 bg-gold-500 rounded-full flex items-center justify-center mx-auto shadow-lg">
                 <Award size={32} className="text-sage-900" />
               </div>
               <h3 className="text-4xl font-serif font-bold text-gold-400">5+</h3>
@@ -159,7 +218,7 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="space-y-4"
             >
-              <div className="w-16 h-16 bg-gold-500 rounded-full flex items-center justify-center mx-auto">
+              <div className="w-16 h-16 bg-gold-500 rounded-full flex items-center justify-center mx-auto shadow-lg">
                 <Star size={32} className="text-sage-900" />
               </div>
               <h3 className="text-4xl font-serif font-bold text-gold-400">4.9</h3>
@@ -189,7 +248,7 @@ export default function Home() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-maroon-600 hover:bg-maroon-700 text-black px-8 py-4 rounded-full font-semibold text-lg transition-colors duration-200 flex items-center space-x-2 mx-auto"
+                className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-200 flex items-center space-x-2 mx-auto shadow-lg"
               >
                 <span>Read More Reviews</span>
                 <ArrowRight size={20} />
@@ -219,7 +278,7 @@ export default function Home() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-gold-500 hover:bg-gold-400 text-sage-900 px-10 py-5 rounded-full font-semibold text-lg transition-all duration-200 flex items-center space-x-2 shadow-xl hover:shadow-2xl ring-2 ring-gold-300 focus:outline-none focus-visible:ring-4 focus-visible:ring-gold-200"
+                  className="bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white px-10 py-5 rounded-full font-semibold text-lg transition-all duration-200 flex items-center space-x-2 shadow-xl hover:shadow-2xl"
                 >
                   <span>Book Now</span>
                   <ArrowRight size={20} />
@@ -229,7 +288,7 @@ export default function Home() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="border-2 border-white text-white hover:bg-white hover:text-sage-900 px-8 py-4 rounded-full font-semibold text-lg transition-colors duration-200"
+                  className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-200 shadow-lg"
                 >
                   Contact Us
                 </motion.button>

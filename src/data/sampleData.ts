@@ -501,7 +501,7 @@ export const products: Product[] = [
     description: 'Beautiful Diwali mehndi design with traditional patterns, diya motifs, and festive elements perfect for the festival of lights.',
     price: '₹3,500',
     originalPrice: '₹4,500',
-    image: '/images/festivalheader.jpeg',
+    image: '/images/diwali1.jpeg',
     masterCategory: 'festival',
     subCategory: 'Diwali Festival',
     inStock: true,
@@ -683,6 +683,475 @@ export const products: Product[] = [
     description: 'Relaxed and comfortable casual mehndi design with simple patterns perfect for everyday activities and leisure time.',
     price: '₹1,400',
     image: '/images/normal.jpg',
+    masterCategory: 'hobby',
+    subCategory: 'Casual Hobby',
+    inStock: true,
+    rating: 4
+  },
+
+  // ADDITIONAL FESTIVAL MEHNDI - DIWALI FESTIVAL SUBCATEGORY
+  {
+    id: 'prod-37',
+    name: 'Diwali Special Mehndi Design',
+    description: 'Exquisite Diwali mehndi with intricate rangoli-inspired patterns, diya motifs, and festive geometric designs for the festival of lights.',
+    price: '₹3,800',
+    image: '/images/diwali1.jpeg',
+    masterCategory: 'festival',
+    subCategory: 'Diwali Festival',
+    inStock: true,
+    rating: 5
+  },
+  {
+    id: 'prod-38',
+    name: 'Lakshmi Diwali Mehndi',
+    description: 'Beautiful Diwali mehndi featuring Lakshmi motifs, lotus patterns, and prosperity symbols perfect for Diwali celebrations.',
+    price: '₹4,000',
+    originalPrice: '₹5,000',
+    image: '/images/floralfestival.jpg',
+    masterCategory: 'festival',
+    subCategory: 'Diwali Festival',
+    inStock: true,
+    rating: 5,
+    featured: true
+  },
+  {
+    id: 'prod-39',
+    name: 'Rangoli Diwali Design',
+    description: 'Stunning Diwali mehndi inspired by traditional rangoli patterns with colorful motifs and festive elements.',
+    price: '₹3,600',
+    image: '/images/festivalheader.jpeg',
+    masterCategory: 'festival',
+    subCategory: 'Diwali Festival',
+    inStock: true,
+    rating: 4
+  },
+  {
+    id: 'prod-40',
+    name: 'Premium Diwali Mehndi',
+    description: 'Luxurious Diwali mehndi design with elaborate patterns, peacock motifs, and elegant borders for special Diwali celebrations.',
+    price: '₹4,500',
+    image: '/images/diwali1.jpeg',
+    masterCategory: 'festival',
+    subCategory: 'Diwali Festival',
+    inStock: true,
+    rating: 5
+  },
+
+  // ADDITIONAL FESTIVAL MEHNDI - KARWA CHAUTH SUBCATEGORY
+  {
+    id: 'prod-41',
+    name: 'Romantic Karwa Chauth Mehndi',
+    description: 'Beautiful Karwa Chauth mehndi with moon and star motifs, romantic patterns, and traditional designs for this special fast.',
+    price: '₹4,200',
+    image: '/images/elegant.jpg',
+    masterCategory: 'festival',
+    subCategory: 'Karwa Chauth',
+    inStock: true,
+    rating: 5
+  },
+  {
+    id: 'prod-42',
+    name: 'Traditional Karwa Chauth Design',
+    description: 'Classic Karwa Chauth mehndi featuring traditional patterns, moon designs, and elegant motifs for the auspicious occasion.',
+    price: '₹3,800',
+    image: '/images/floralfestival.jpg',
+    masterCategory: 'festival',
+    subCategory: 'Karwa Chauth',
+    inStock: true,
+    rating: 4
+  },
+  {
+    id: 'prod-43',
+    name: 'Elegant Karwa Chauth Mehndi',
+    description: 'Sophisticated Karwa Chauth mehndi with delicate patterns, crescent moon motifs, and graceful designs perfect for the occasion.',
+    price: '₹4,500',
+    originalPrice: '₹5,500',
+    image: '/images/elegant.jpg',
+    masterCategory: 'festival',
+    subCategory: 'Karwa Chauth',
+    inStock: true,
+    rating: 5,
+    featured: true
+  },
+
+  // ADDITIONAL FESTIVAL MEHNDI - HOLI FESTIVAL SUBCATEGORY
+  {
+    id: 'prod-44',
+    name: 'Colorful Holi Mehndi',
+    description: 'Vibrant Holi mehndi design with playful patterns, flower motifs, and festive elements perfect for the spring festival of colors.',
+    price: '₹3,500',
+    image: '/images/mehndigroup.jpg',
+    masterCategory: 'festival',
+    subCategory: 'Holi Festival',
+    inStock: true,
+    rating: 4
+  },
+  {
+    id: 'prod-45',
+    name: 'Spring Holi Design',
+    description: 'Beautiful Holi mehndi featuring spring flowers, colorful patterns, and joyful motifs for Holi celebrations.',
+    price: '₹3,900',
+    image: '/images/floralfestival.jpg',
+    masterCategory: 'festival',
+    subCategory: 'Holi Festival',
+    inStock: true,
+    rating: 5
+  },
+  {
+    id: 'prod-46',
+    name: 'Festive Holi Mehndi',
+    description: 'Energetic Holi mehndi design with dynamic patterns, celebration motifs, and vibrant designs for the festival of colors.',
+    price: '₹4,000',
+    image: '/images/festivalheader.jpeg',
+    masterCategory: 'festival',
+    subCategory: 'Holi Festival',
+    inStock: true,
+    rating: 4
+  },
+
+  // ADDITIONAL FESTIVAL MEHNDI - EID FESTIVAL SUBCATEGORY
+  {
+    id: 'prod-47',
+    name: 'Eid Mubarak Mehndi',
+    description: 'Elegant Eid mehndi with traditional Islamic geometric patterns, crescent moon motifs, and sophisticated designs for Eid celebrations.',
+    price: '₹4,500',
+    image: '/images/eid.jpg',
+    masterCategory: 'festival',
+    subCategory: 'Eid Festival',
+    inStock: true,
+    rating: 5,
+    featured: true
+  },
+  {
+    id: 'prod-48',
+    name: 'Traditional Eid Design',
+    description: 'Classic Eid mehndi featuring intricate Islamic patterns, geometric motifs, and elegant borders for festive celebrations.',
+    price: '₹4,000',
+    image: '/images/elegant.jpg',
+    masterCategory: 'festival',
+    subCategory: 'Eid Festival',
+    inStock: true,
+    rating: 5
+  },
+  {
+    id: 'prod-49',
+    name: 'Premium Eid Mehndi',
+    description: 'Luxurious Eid mehndi design with elaborate geometric patterns, traditional motifs, and sophisticated designs for special Eid celebrations.',
+    price: '₹4,800',
+    originalPrice: '₹5,500',
+    image: '/images/eid.jpg',
+    masterCategory: 'festival',
+    subCategory: 'Eid Festival',
+    inStock: true,
+    rating: 5
+  },
+
+  // ADDITIONAL PARTY MEHNDI - WEDDING PARTY SUBCATEGORY
+  {
+    id: 'prod-50',
+    name: 'Mehndi Night Party Design',
+    description: 'Stunning mehndi night party design with elaborate patterns, celebration motifs, and elegant designs perfect for pre-wedding celebrations.',
+    price: '₹3,500',
+    image: '/images/partyheader.jpg',
+    masterCategory: 'party',
+    subCategory: 'Wedding Party',
+    inStock: true,
+    rating: 5
+  },
+  {
+    id: 'prod-51',
+    name: 'Cocktail Party Mehndi',
+    description: 'Elegant cocktail party mehndi with sophisticated patterns and modern designs perfect for wedding cocktail parties.',
+    price: '₹3,200',
+    image: '/images/contemporary.jpg',
+    masterCategory: 'party',
+    subCategory: 'Wedding Party',
+    inStock: true,
+    rating: 4
+  },
+  {
+    id: 'prod-52',
+    name: 'Reception Party Mehndi',
+    description: 'Beautiful reception party mehndi design with elegant patterns and festive elements perfect for wedding receptions.',
+    price: '₹3,800',
+    originalPrice: '₹4,500',
+    image: '/images/partyheader.jpg',
+    masterCategory: 'party',
+    subCategory: 'Wedding Party',
+    inStock: true,
+    rating: 5,
+    featured: true
+  },
+  {
+    id: 'prod-53',
+    name: 'Haldi Party Mehndi',
+    description: 'Vibrant Haldi party mehndi with playful patterns and celebratory motifs perfect for Haldi ceremonies and wedding parties.',
+    price: '₹3,000',
+    image: '/images/mehndigroup.jpg',
+    masterCategory: 'party',
+    subCategory: 'Wedding Party',
+    inStock: true,
+    rating: 4
+  },
+
+  // ADDITIONAL PARTY MEHNDI - BIRTHDAY PARTY SUBCATEGORY
+  {
+    id: 'prod-54',
+    name: 'Kids Birthday Party Mehndi',
+    description: 'Fun and playful birthday party mehndi with cute patterns, cartoon motifs, and celebratory designs perfect for children\'s birthdays.',
+    price: '₹2,000',
+    image: '/images/mehndigroup.jpg',
+    masterCategory: 'party',
+    subCategory: 'Birthday Party',
+    inStock: true,
+    rating: 4
+  },
+  {
+    id: 'prod-55',
+    name: 'Adult Birthday Celebration',
+    description: 'Elegant birthday party mehndi with sophisticated patterns and festive designs perfect for adult birthday celebrations.',
+    price: '₹2,800',
+    image: '/images/partyheader.jpg',
+    masterCategory: 'party',
+    subCategory: 'Birthday Party',
+    inStock: true,
+    rating: 5
+  },
+  {
+    id: 'prod-56',
+    name: 'Milestone Birthday Mehndi',
+    description: 'Special milestone birthday mehndi design with elaborate patterns and celebration motifs for significant birthday celebrations.',
+    price: '₹3,200',
+    originalPrice: '₹4,000',
+    image: '/images/floralfestival.jpg',
+    masterCategory: 'party',
+    subCategory: 'Birthday Party',
+    inStock: true,
+    rating: 5,
+    featured: true
+  },
+
+  // ADDITIONAL PARTY MEHNDI - ANNIVERSARY PARTY SUBCATEGORY
+  {
+    id: 'prod-57',
+    name: 'Golden Anniversary Mehndi',
+    description: 'Luxurious golden anniversary mehndi with elegant patterns, romantic motifs, and sophisticated designs for milestone anniversaries.',
+    price: '₹3,500',
+    image: '/images/elegant.jpg',
+    masterCategory: 'party',
+    subCategory: 'Anniversary Party',
+    inStock: true,
+    rating: 5
+  },
+  {
+    id: 'prod-58',
+    name: 'Romantic Anniversary Design',
+    description: 'Beautiful romantic anniversary mehndi with heart patterns, couple motifs, and elegant designs for celebrating love.',
+    price: '₹3,000',
+    image: '/images/floralfestival.jpg',
+    masterCategory: 'party',
+    subCategory: 'Anniversary Party',
+    inStock: true,
+    rating: 4
+  },
+  {
+    id: 'prod-59',
+    name: 'Wedding Anniversary Mehndi',
+    description: 'Elegant wedding anniversary mehndi with traditional patterns and romantic elements perfect for celebrating marriage milestones.',
+    price: '₹3,600',
+    image: '/images/partyheader.jpg',
+    masterCategory: 'party',
+    subCategory: 'Anniversary Party',
+    inStock: true,
+    rating: 5
+  },
+
+  // ADDITIONAL PARTY MEHNDI - CELEBRATION PARTY SUBCATEGORY
+  {
+    id: 'prod-60',
+    name: 'Graduation Party Mehndi',
+    description: 'Celebratory graduation party mehndi with achievement motifs, elegant patterns, and festive designs for graduation celebrations.',
+    price: '₹2,500',
+    image: '/images/contemporary.jpg',
+    masterCategory: 'party',
+    subCategory: 'Celebration Party',
+    inStock: true,
+    rating: 4
+  },
+  {
+    id: 'prod-61',
+    name: 'Engagement Party Mehndi',
+    description: 'Beautiful engagement party mehndi with romantic patterns, ring motifs, and elegant designs for engagement celebrations.',
+    price: '₹3,000',
+    image: '/images/partyheader.jpg',
+    masterCategory: 'party',
+    subCategory: 'Celebration Party',
+    inStock: true,
+    rating: 5
+  },
+  {
+    id: 'prod-62',
+    name: 'Housewarming Party Mehndi',
+    description: 'Festive housewarming party mehndi with home motifs, prosperity patterns, and celebratory designs for new home celebrations.',
+    price: '₹2,800',
+    image: '/images/mehndigroup.jpg',
+    masterCategory: 'party',
+    subCategory: 'Celebration Party',
+    inStock: true,
+    rating: 4
+  },
+  {
+    id: 'prod-63',
+    name: 'Success Party Mehndi',
+    description: 'Elegant success party mehndi with achievement patterns and celebratory motifs for celebrating accomplishments and milestones.',
+    price: '₹3,200',
+    originalPrice: '₹4,000',
+    image: '/images/floralfestival.jpg',
+    masterCategory: 'party',
+    subCategory: 'Celebration Party',
+    inStock: true,
+    rating: 5,
+    featured: true
+  },
+
+  // ADDITIONAL HOBBY MEHNDI - MINIMALIST HOBBY SUBCATEGORY
+  {
+    id: 'prod-64',
+    name: 'Ultra Minimalist Design',
+    description: 'Extremely subtle minimalist mehndi with minimal patterns and clean lines perfect for those who prefer understated elegance.',
+    price: '₹1,000',
+    image: '/images/normal.jpg',
+    masterCategory: 'hobby',
+    subCategory: 'Minimalist Hobby',
+    inStock: true,
+    rating: 4
+  },
+  {
+    id: 'prod-65',
+    name: 'Modern Minimalist Mehndi',
+    description: 'Contemporary minimalist mehndi with modern geometric patterns and sleek designs for the fashion-forward individual.',
+    price: '₹1,600',
+    image: '/images/hobbyheader.jpg',
+    masterCategory: 'hobby',
+    subCategory: 'Minimalist Hobby',
+    inStock: true,
+    rating: 5
+  },
+  {
+    id: 'prod-66',
+    name: 'Delicate Minimalist Design',
+    description: 'Fine and delicate minimalist mehndi with subtle patterns and elegant simplicity perfect for everyday elegance.',
+    price: '₹1,300',
+    originalPrice: '₹1,800',
+    image: '/images/normal.jpg',
+    masterCategory: 'hobby',
+    subCategory: 'Minimalist Hobby',
+    inStock: true,
+    rating: 5,
+    featured: true
+  },
+  {
+    id: 'prod-67',
+    name: 'Classic Minimalist Mehndi',
+    description: 'Timeless minimalist mehndi with classic patterns and refined elegance suitable for any casual occasion.',
+    price: '₹1,400',
+    image: '/images/hobbyheader.jpg',
+    masterCategory: 'hobby',
+    subCategory: 'Minimalist Hobby',
+    inStock: true,
+    rating: 4
+  },
+
+  // ADDITIONAL HOBBY MEHNDI - OFFICE-FRIENDLY SUBCATEGORY
+  {
+    id: 'prod-68',
+    name: 'Corporate Hobby Mehndi',
+    description: 'Professional corporate mehndi with discreet patterns and business-appropriate designs perfect for corporate environments.',
+    price: '₹2,200',
+    image: '/images/office.jpg',
+    masterCategory: 'hobby',
+    subCategory: 'Office-Friendly',
+    inStock: true,
+    rating: 5
+  },
+  {
+    id: 'prod-69',
+    name: 'Subtle Office Design',
+    description: 'Very subtle office-friendly mehndi with minimal patterns and professional appearance suitable for formal workplace settings.',
+    price: '₹1,600',
+    image: '/images/hobbyheader.jpg',
+    masterCategory: 'hobby',
+    subCategory: 'Office-Friendly',
+    inStock: true,
+    rating: 4
+  },
+  {
+    id: 'prod-70',
+    name: 'Executive Hobby Mehndi',
+    description: 'Sophisticated executive mehndi with elegant patterns and refined designs perfect for professional executives and business leaders.',
+    price: '₹2,400',
+    originalPrice: '₹3,000',
+    image: '/images/office.jpg',
+    masterCategory: 'hobby',
+    subCategory: 'Office-Friendly',
+    inStock: true,
+    rating: 5,
+    featured: true
+  },
+  {
+    id: 'prod-71',
+    name: 'Business Casual Mehndi',
+    description: 'Versatile business casual mehndi with balanced patterns suitable for both professional and casual business settings.',
+    price: '₹1,900',
+    image: '/images/hobbyheader.jpg',
+    masterCategory: 'hobby',
+    subCategory: 'Office-Friendly',
+    inStock: true,
+    rating: 4
+  },
+
+  // ADDITIONAL HOBBY MEHNDI - CASUAL HOBBY SUBCATEGORY
+  {
+    id: 'prod-72',
+    name: 'Weekend Casual Mehndi',
+    description: 'Relaxed weekend casual mehndi with comfortable patterns and easy-going designs perfect for weekend activities.',
+    price: '₹1,300',
+    image: '/images/normal.jpg',
+    masterCategory: 'hobby',
+    subCategory: 'Casual Hobby',
+    inStock: true,
+    rating: 4
+  },
+  {
+    id: 'prod-73',
+    name: 'Everyday Hobby Design',
+    description: 'Simple everyday mehndi with practical patterns and comfortable designs perfect for daily wear and casual occasions.',
+    price: '₹1,200',
+    image: '/images/hobbyheader.jpg',
+    masterCategory: 'hobby',
+    subCategory: 'Casual Hobby',
+    inStock: true,
+    rating: 4
+  },
+  {
+    id: 'prod-74',
+    name: 'Relaxed Casual Mehndi',
+    description: 'Comfortable relaxed casual mehndi with simple patterns and laid-back designs for leisure time and casual activities.',
+    price: '₹1,500',
+    originalPrice: '₹2,000',
+    image: '/images/normal.jpg',
+    masterCategory: 'hobby',
+    subCategory: 'Casual Hobby',
+    inStock: true,
+    rating: 5,
+    featured: true
+  },
+  {
+    id: 'prod-75',
+    name: 'Comfortable Hobby Mehndi',
+    description: 'Easy and comfortable hobby mehndi with simple patterns perfect for those who enjoy mehndi as a relaxing hobby activity.',
+    price: '₹1,350',
+    image: '/images/hobbyheader.jpg',
     masterCategory: 'hobby',
     subCategory: 'Casual Hobby',
     inStock: true,
