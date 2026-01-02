@@ -525,10 +525,10 @@ export default function Contact() {
                 color: "from-red-500 to-pink-500"
               },
               {
-                platform: "Quora",
+                platform: "Youtube",
                 handle: "Henar Best Mehndi Art",
                 description: "Read our answers and insights about mehndi art.",
-                url: "https://www.quora.com/profile/Henar-Best-Mehndi-Ar",
+                url: "https://youtube.com/@henarmehndiartist?si=cmtHvc4cM2f95dyv",
                 icon: MessageCircle,
                 color: "from-orange-500 to-red-500"
               },
@@ -622,7 +622,7 @@ export default function Contact() {
               },
               {
                 question: "What areas do you serve?",
-                answer: "We serve the greater metropolitan area and surrounding regions. Contact us to confirm if we can travel to your location."
+                answer: "We serve all locations, including India and abroad. Contact us to confirm if we can travel to your location."
               },
               {
                 question: "Can I see examples of your work before booking?",

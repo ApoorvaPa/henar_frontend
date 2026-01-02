@@ -186,7 +186,7 @@ export default function About() {
             >
               <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/artist.jpg"
+                  src="/images/Artists.png"
                   alt="Mehndi artist at work"
                   width={500}
                   height={500}

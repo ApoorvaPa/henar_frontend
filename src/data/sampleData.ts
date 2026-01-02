@@ -113,7 +113,7 @@ export const portfolioItems: PortfolioItem[] = [
     id: '1',
     title: 'Royal Bridal Design',
     category: 'bridal',
-    image: '/images/portfolio/bridal1.jpg',
+    image: '/images/madhubani2.jpg',
     description: 'A stunning bridal design featuring intricate paisley patterns and floral motifs.',
     date: '2024-01-15'
   },
@@ -145,7 +145,7 @@ export const portfolioItems: PortfolioItem[] = [
     id: '5',
     title: 'Grand Wedding Design',
     category: 'bridal',
-    image: '/images/royalbridal.jpg',
+    image: '/images/coverbridal.jpeg',
     description: 'Elaborate bridal henna covering full arms and hands.',
     date: '2024-01-01'
   },
@@ -335,17 +335,7 @@ export const products: Product[] = [
     inStock: true,
     rating: 5
   },
-  {
-    id: 'prod-9',
-    name: 'Traditional Moroccan Bridal',
-    description: 'Authentic Moroccan bridal mehndi design with traditional patterns and cultural significance.',
-    price: '₹7,000',
-    image: '/images/portfolio/bridal1.jpg',
-    masterCategory: 'bridal',
-    subCategory: 'Moroccan Bridal',
-    inStock: true,
-    rating: 4
-  },
+
 
   // MADHUBANI BRIDAL SUBCATEGORY
   {
@@ -616,9 +606,9 @@ export const products: Product[] = [
   // PARTY MEHNDI - CELEBRATION PARTY SUBCATEGORY
   {
     id: 'prod-31',
-    name: 'General Celebration Mehndi',
+    name: 'General Celebration Combo - 10 hands',
     description: 'Versatile celebration mehndi design suitable for any party or special occasion with elegant and festive patterns.',
-    price: '₹2,800',
+    price: '₹5,800',
     image: '/images/partyheader.jpg',
     masterCategory: 'party',
     subCategory: 'Celebration Party',
@@ -848,17 +838,7 @@ export const products: Product[] = [
   },
 
   // ADDITIONAL PARTY MEHNDI - WEDDING PARTY SUBCATEGORY
-  {
-    id: 'prod-50',
-    name: 'Mehndi Night Party Design',
-    description: 'Stunning mehndi night party design with elaborate patterns, celebration motifs, and elegant designs perfect for pre-wedding celebrations.',
-    price: '₹3,500',
-    image: '/images/partyheader.jpg',
-    masterCategory: 'party',
-    subCategory: 'Wedding Party',
-    inStock: true,
-    rating: 5
-  },
+
   {
     id: 'prod-51',
     name: 'Cocktail Party Mehndi',
@@ -870,19 +850,7 @@ export const products: Product[] = [
     inStock: true,
     rating: 4
   },
-  {
-    id: 'prod-52',
-    name: 'Reception Party Mehndi',
-    description: 'Beautiful reception party mehndi design with elegant patterns and festive elements perfect for wedding receptions.',
-    price: '₹3,800',
-    originalPrice: '₹4,500',
-    image: '/images/partyheader.jpg',
-    masterCategory: 'party',
-    subCategory: 'Wedding Party',
-    inStock: true,
-    rating: 5,
-    featured: true
-  },
+  
   {
     id: 'prod-53',
     name: 'Haldi Party Mehndi',
@@ -1230,18 +1198,7 @@ export const products: Product[] = [
     rating: 5,
     // featured: true
   },
-  {
-    id: 'prod-82',
-    name: 'Royal Bridal Hands and Feet',
-    description: 'Authentic Pakistani bridal mehndi with intricate patterns, detailed motifs, and traditional Pakistani designs.',
-    price: '₹8,100',
-    image: '/images/royal8100.jpeg',
-    masterCategory: 'bridal',
-    subCategory: 'Royal Bridal',
-    inStock: true,
-    rating: 5,
-    // featured: true
-  },
+
   {
     id: 'prod-83',
     name: 'Madhubani Pretty Feet',
@@ -1306,7 +1263,7 @@ export const products: Product[] = [
     id: 'prod-88',
     name: 'Madhubani flower hands',
     description: 'Authentic Pakistani bridal mehndi with intricate patterns, detailed motifs, and traditional Pakistani designs.',
-    price: '₹ ,100',
+    price: '₹6,100',
     image: '/images/mad6100.jpeg',
     masterCategory: 'bridal',
     subCategory: 'Madhubani Bridal',
@@ -1353,9 +1310,93 @@ export const products: Product[] = [
   {
     id: 'prod-92',
     name: 'Arabic Feet',
-    description: 'Authentic Pakistani bridal mehndi with intricate patterns, detailed motifs, and traditional Pakistani designs.',
+    description: 'Authentic Arabic bridal mehndi with intricate patterns, detailed motifs, and traditional Pakistani designs.',
     price: '₹6,100',
     image: '/images/arabic6100.jpeg',
+    masterCategory: 'bridal',
+    subCategory: 'Arabic',
+    inStock: true,
+    rating: 5,
+    // featured: true
+  },
+  {
+    id: 'prod-101',
+    name: 'Arabic Feet Flora',
+    description: 'Authentic Arabic bridal mehndi with Smart floral patterns, detailed motifs, and traditional Pakistani designs.',
+    price: '₹11,000',
+    image: '/images/arabic0001.jpeg',
+    masterCategory: 'bridal',
+    subCategory: 'Arabic',
+    inStock: true,
+    rating: 5,
+    // featured: true
+  },
+  {
+    id: 'prod-102',
+    name: 'Arabic Hands Flora',
+    description: 'Authentic Arabic bridal mehndi with Smart floral patterns, detailed motifs, and traditional Pakistani designs.',
+    price: '₹7,100',
+    image: '/images/arabic0002.jpeg',
+    masterCategory: 'bridal',
+    subCategory: 'Arabic',
+    inStock: true,
+    rating: 5,
+    // featured: true
+  },
+  {
+    id: 'prod-103',
+    name: 'Majestic Arabic Hands',
+    description: 'Authentic Arabic bridal mehndi with Smart floral patterns, detailed motifs, and traditional Pakistani designs.',
+    price: '₹8,100',
+    image: '/images/arabic004.jpeg',
+    masterCategory: 'bridal',
+    subCategory: 'Arabic',
+    inStock: true,
+    rating: 5,
+    // featured: true
+  },
+  {
+    id: 'prod-104',
+    name: 'Royal Majestic Arabic Hands',
+    description: 'Authentic Arabic bridal mehndi with Smart floral patterns, detailed motifs, and traditional Pakistani designs.',
+    price: '₹11,000',
+    image: '/images/arabic0005.jpeg',
+    masterCategory: 'bridal',
+    subCategory: 'Arabic',
+    inStock: true,
+    rating: 5,
+    // featured: true
+  },
+  {
+    id: 'prod-105',
+    name: 'Royal Majestic Arabic with Name',
+    description: 'Authentic Arabic bridal mehndi with Smart floral patterns, detailed motifs, and traditional Pakistani designs.',
+    price: '₹8,100',
+    image: '/images/arabic0006.jpeg',
+    masterCategory: 'bridal',
+    subCategory: 'Arabic',
+    inStock: true,
+    rating: 5,
+    // featured: true
+  },
+  {
+    id: 'prod-106',
+    name: 'Arabic Flower Climbers',
+    description: 'Authentic Arabic bridal mehndi with Smart floral patterns, detailed motifs, and traditional Pakistani designs.',
+    price: '₹8,100',
+    image: '/images/arabic0007.jpeg',
+    masterCategory: 'bridal',
+    subCategory: 'Arabic',
+    inStock: true,
+    rating: 5,
+    // featured: true
+  },
+  {
+    id: 'prod-107',
+    name: 'Arabic Intricate Arts',
+    description: 'Authentic Arabic bridal mehndi with Smart floral patterns, detailed motifs, and traditional Pakistani designs.',
+    price: '₹6,100',
+    image: '/images/arabic0008.jpeg',
     masterCategory: 'bridal',
     subCategory: 'Arabic',
     inStock: true,
@@ -1400,4 +1441,44 @@ export const products: Product[] = [
     rating: 5,
     featured: true
   },
+  {
+    id: 'prod-108',
+    name: 'The Ultimate Royal Hands and Feet',
+    description: 'Stunning 3D bridal mehndi design that creates an illusion of depth with layered patterns and shadow effects.',
+    price: '₹15,000',
+    originalPrice: '₹21,000',
+    image: '/images/Royal0001.jpeg',
+    masterCategory: 'bridal',
+    subCategory: 'Royal Bridal',
+    inStock: true,
+    rating: 5,
+    featured: true
+  },
+  {
+    id: 'prod-109',
+    name: 'The heavy floral royal art',
+    description: 'Stunning 3D bridal mehndi design that creates an illusion of depth with layered patterns and shadow effects.',
+    price: '₹11,000',
+    originalPrice: '₹21,000',
+    image: '/images/royal0003.jpeg',
+    masterCategory: 'bridal',
+    subCategory: 'Royal Bridal',
+    inStock: true,
+    rating: 5,
+    featured: true
+  },
+  {
+    id: 'prod-110',
+    name: 'The heavy floral twist',
+    description: 'Stunning 3D bridal mehndi design that creates an illusion of depth with layered patterns and shadow effects.',
+    price: '₹15,000',
+    originalPrice: '₹21,000',
+    image: '/images/royal0004.jpeg',
+    masterCategory: 'bridal',
+    subCategory: 'Royal Bridal',
+    inStock: true,
+    rating: 5,
+    featured: true
+  },
+
 ];
