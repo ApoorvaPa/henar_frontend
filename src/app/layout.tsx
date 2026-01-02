@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   description: "Professional mehndi artist specializing in bridal, party, Festival, and Hobby henna designs. Book your appointment today for stunning traditional artistry.",
   keywords: "mehndi, henna, bridal mehndi, party mehndi, Festival mehndi, henna artist",
   authors: [{ name: "Henar" }],
+
   openGraph: {
     title: "Henar - Beautiful Mehndi Designs",
     description: "Professional mehndi artist specializing in bridal, party, Festival, and Hobby henna designs.",
